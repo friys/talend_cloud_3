@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="pg_tst_Schema" prompt="pg_tst_Schema?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="public"/>
+    <contextParameter comment="" name="pg_tst_Port" prompt="pg_tst_Port?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="5432"/>
+    <contextParameter comment="" name="pg_tst_Password" prompt="pg_tst_Password?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_Password" value=""/>
+    <contextParameter comment="" name="pg_tst_Login" prompt="pg_tst_Login?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="postgres"/>
+    <contextParameter comment="" name="pg_tst_Server" prompt="pg_tst_Server?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="pg_tst_Database" prompt="pg_tst_Database?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="postgres"/>
+  </context>
+  <context confirmationNeeded="false" name="cloud">
+    <contextParameter comment="" name="pg_tst_Schema" prompt="pg_tst_Schema?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="public"/>
+    <contextParameter comment="" name="pg_tst_Port" prompt="pg_tst_Port?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="5432"/>
+    <contextParameter comment="" name="pg_tst_Password" prompt="pg_tst_Password?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_Password" value=""/>
+    <contextParameter comment="" name="pg_tst_Login" prompt="pg_tst_Login?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="postgres"/>
+    <contextParameter comment="" name="pg_tst_Server" prompt="pg_tst_Server?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="pg_tst_Database" prompt="pg_tst_Database?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="postgres"/>
+  </context>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -109,13 +126,101 @@
     <routinesParameter id="_Ad17cOy4EeiKnJatvEeiPQ" name="DQTechnical"/>
     <routinesParameter id="_AeD94Oy4EeiKnJatvEeiPQ" name="SQLike"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a1b93197-9d49-4b1e-89e4-852cf877abac"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ThWELf9nFNjdCFpHAqWGeaGKZSESBhWxKfdOLIB1D+M9zg2DExG9OWdgXHCy6vsJCvyPSjswmnSq
-sCiSV9xTAA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_62e0d207-22d7-40a4-a10d-7a034591a078"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wum48MptGmTLlHhy17R1HZS4PoUBj9w/+Et+nd/uJWzuuezPqxLT4GwMoSR95y/TkKAs6KkWzk9w
-gdf0qySPnw==</DigestValue></Reference></SignedInfo><SignatureValue>kygSUgmK8SJD9dZQWY9HTlqV6kxvTuXT8YO6kjH2ei8veLBq7AExok7k7YEH5VId8Wu1gzTSUh5D
-h0jEy/QoIeHJ89hSzqMry7AaRLzQqvWJPXfH+UGQsMAMmfYxZ4M/DqQM39175YRwd/rz33nlkzH8
-0OYkqsoew5WvQVsiNRAyjlmN0f6oPUXQHWrcPZKpjN7oKd4u/HvEKfGicelFTYGqHsSQhCKTFr8g
-1dU7yCYg8JYdRtu2+Ndb9IJ4DupHVumjtrBo/jdl9KZ+YZBcl28bowHKhmJRObm8Xw0/410xmy1f
-8MmbQLTEVCI6wkW8vV+UdWPj0nsRfACLgc4sPQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_8V1xAOzHEeiKnJatvEeiPQ"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="context.pg_tst_Server"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.pg_tst_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.pg_tst_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.pg_tst_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.pg_tst_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kueHXUEeB1EV8a52uuCZgZAM"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_8V1xAOzHEeiKnJatvEeiPQ - tst"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;tst&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  \&quot;&quot;+context.pg_tst_Database+&quot;\&quot;.\&quot;&quot;+context.pg_tst_Schema+&quot;\&quot;.\&quot;tst\&quot;.\&quot;id\&quot;, &#10;  \&quot;&quot;+context.pg_tst_Database+&quot;\&quot;.\&quot;&quot;+context.pg_tst_Schema+&quot;\&quot;.\&quot;tst\&quot;.\&quot;name\&quot;&#10;FROM \&quot;&quot;+context.pg_tst_Database+&quot;\&quot;.\&quot;&quot;+context.pg_tst_Schema+&quot;\&quot;.\&quot;tst\&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="postgres_id"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="tst" name="tDBInput_2">
+      <column comment="" key="false" length="10" name="id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="2147483647" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="tst" name="tLogRow_1">
+      <column comment="" key="false" length="10" name="id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="2147483647" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ca354cbb-56a6-4442-bc04-cf317d444e06"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vfTFILcZgUNgsFZUA4XMPF4zjU4hb+5A+AHj9iau5vNtaJbTSwQNMcdYKwCO4hZjq0LDnczE38WP
+0UyDTSb0QQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6271af3f-3f77-42b1-860c-fb44a69eafd3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rXSJ69kdIOGCDMusjreF3nzp5cg1bp/A9C71bUrHbrNz+1cbzETg+aHnL8wNAau8s0vHkxoblleE
+tsvPUauwAw==</DigestValue></Reference></SignedInfo><SignatureValue>l+e63GVKWFcKb6VlVIHYrfUljm52fIJRbtYNYek5B2wExsIGXaha0L9CJ5EhP8CeeiDym3mgZqqj
+bCyS79ZmS479bESJRoHhpAbsv4YgkNaADXUpr/GdWTM+Mh5wEYxgjp0zOmgsROfQK35i0oZAu4bU
+SB6a5tZb0qrfhkhYagRfgJgvdK//yxGa/vk1PaTma6wRVczg/iwikyUuvU4P576m1ZRbx5AmsL/X
+ni94dSjn0p6JnRLosBnVwqoxANdzM4PEiMMMVO2tWPQbV1T9Hcojk0zN8ODaItl+l5PGI0Xj6eNA
+rx9zRVDA5Jv1lQ5H38HkUETXEa1T+s2eLh82Xw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -139,4 +244,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_62e0d207-22d7-40a4-a10d-7a034591a078" Target="#_a1b93197-9d49-4b1e-89e4-852cf877abac"><Timestamp>2018-11-20 13:26:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6271af3f-3f77-42b1-860c-fb44a69eafd3" Target="#_ca354cbb-56a6-4442-bc04-cf317d444e06"><Timestamp>2018-11-20 13:31:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
