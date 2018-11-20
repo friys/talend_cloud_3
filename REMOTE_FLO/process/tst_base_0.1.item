@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="cloud" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="connection_pgremote_Schema" prompt="connection_pgremote_Schema?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="public"/>
-    <contextParameter comment="" name="connection_pgremote_Port" prompt="connection_pgremote_Port?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="5432"/>
-    <contextParameter comment="" name="connection_pgremote_Password" prompt="connection_pgremote_Password?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
-    <contextParameter comment="" name="connection_pgremote_Login" prompt="connection_pgremote_Login?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="postgres"/>
-    <contextParameter comment="" name="connection_pgremote_Server" prompt="connection_pgremote_Server?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="connection_pgremote_Database" prompt="connection_pgremote_Database?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="postgres"/>
+    <contextParameter comment="" name="connection_pgremote_schema" prompt="connection_pgremote_schema?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="public"/>
+    <contextParameter comment="" name="connection_pgremote_port" prompt="connection_pgremote_port?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="5432"/>
+    <contextParameter comment="" name="connection_pgremote_password" prompt="connection_pgremote_password?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
+    <contextParameter comment="" name="connection_pgremote_login" prompt="connection_pgremote_login?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="postgres"/>
+    <contextParameter comment="" name="connection_pgremote_server" prompt="connection_pgremote_server?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="connection_pgremote_database" prompt="connection_pgremote_database?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value="postgres"/>
   </context>
   <context confirmationNeeded="false" name="cloud">
-    <contextParameter comment="" name="connection_pgremote_Schema" prompt="connection_pgremote_Schema?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
-    <contextParameter comment="" name="connection_pgremote_Port" prompt="connection_pgremote_Port?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
-    <contextParameter comment="" name="connection_pgremote_Password" prompt="connection_pgremote_Password?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
-    <contextParameter comment="" name="connection_pgremote_Login" prompt="connection_pgremote_Login?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
-    <contextParameter comment="" name="connection_pgremote_Server" prompt="connection_pgremote_Server?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
-    <contextParameter comment="" name="connection_pgremote_Database" prompt="connection_pgremote_Database?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
+    <contextParameter comment="" name="connection_pgremote_schema" prompt="connection_pgremote_schema?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
+    <contextParameter comment="" name="connection_pgremote_port" prompt="connection_pgremote_port?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
+    <contextParameter comment="" name="connection_pgremote_password" prompt="connection_pgremote_password?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
+    <contextParameter comment="" name="connection_pgremote_login" prompt="connection_pgremote_login?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
+    <contextParameter comment="" name="connection_pgremote_server" prompt="connection_pgremote_server?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
+    <contextParameter comment="" name="connection_pgremote_database" prompt="connection_pgremote_database?" promptNeeded="false" repositoryContextId="_eY_tUOzIEeiKnJatvEeiPQ" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -133,13 +133,13 @@
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
-    <elementParameter field="TEXT" name="HOST" value="context.connection_pgremote_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.connection_pgremote_server"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
-    <elementParameter field="TEXT" name="PORT" value="context.connection_pgremote_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.connection_pgremote_Database"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.connection_pgremote_Schema"/>
-    <elementParameter field="TEXT" name="USER" value="context.connection_pgremote_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlLzaRUyHs+eJeflfkggN45XzhkW4Y/UuMnA=="/>
+    <elementParameter field="TEXT" name="PORT" value="context.connection_pgremote_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.connection_pgremote_database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.connection_pgremote_schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.connection_pgremote_login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufONy16xVNlLzaRUyHs+eJeAJqS2Bag4pCa7f1TooDVqg=="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_8V1xAOzHEeiKnJatvEeiPQ - tst"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;tst&quot;"/>
@@ -147,7 +147,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  \&quot;&quot;+context.connection_pgremote_Database+&quot;\&quot;.\&quot;&quot;+context.connection_pgremote_Schema+&quot;\&quot;.\&quot;tst\&quot;.\&quot;id\&quot;, &#10;  \&quot;&quot;+context.connection_pgremote_Database+&quot;\&quot;.\&quot;&quot;+context.connection_pgremote_Schema+&quot;\&quot;.\&quot;tst\&quot;.\&quot;name\&quot;&#10;FROM \&quot;&quot;+context.connection_pgremote_Database+&quot;\&quot;.\&quot;&quot;+context.connection_pgremote_Schema+&quot;\&quot;.\&quot;tst\&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  \&quot;&quot;+context.connection_pgremote_database+&quot;\&quot;.\&quot;&quot;+context.connection_pgremote_schema+&quot;\&quot;.\&quot;tst\&quot;.\&quot;id\&quot;, &#10;  \&quot;&quot;+context.connection_pgremote_database+&quot;\&quot;.\&quot;&quot;+context.connection_pgremote_schema+&quot;\&quot;.\&quot;tst\&quot;.\&quot;name\&quot;&#10;FROM \&quot;&quot;+context.connection_pgremote_database+&quot;\&quot;.\&quot;&quot;+context.connection_pgremote_schema+&quot;\&quot;.\&quot;tst\&quot;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="true"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;pgremote&quot;"/>
@@ -214,13 +214,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eb490374-e88d-4ef0-92f2-c100d09955b9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4ZxORmdmRTvfVjtfU41lAHqIM6njd4b+w5QwC4sgAK6C349+eIA9QF/Vf8UohfgmyINTQ5fKnIbM
-Y8uVDkVqjw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_28b7b1a0-abe7-4b3b-8096-3d8afb7fb254"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aaLRSIzSjOtWnEhHI/jHv+kCOtjMiBBTjgpNaDzzIQvK1nJuA5ynRBDitQsQ0Bikry/buMCVX2XH
-Wy041YFCdQ==</DigestValue></Reference></SignedInfo><SignatureValue>atiqMWv/1owZh+2QiBmpD9JkoeSHFyKhwIokhO1ZzdcYz6dk35WJH2pysBuEyrhGLPC454R8IqQJ
-j3/avMh2JcWLqFC2f/P239IjFT/uxDWfwDYWPFhgwzNAxygiX7EAaxssmwKiHwEDzXOueGLuOA9v
-uyvFrLiMAtBTxHvwTh67nEQrTvHDKqHrn+CLnTMpsNJVJrN4BT/YrNYD14LmI2WHVqrmE5zu14+a
-wkd586iCUkG+mY8x7mHLqyBpPoBCVDz1oqiT7LDmx2kOjUbYvf8zmhbJLgBlGe3xQ5VQIgAUzSIu
-pEPgG+WPTkfp0eZO3D5f5C6o/IKpQsfyhP/8hQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1f9f1b15-f856-4730-8d41-f14ab4f4da59"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4AbdkZ5WaX+B1EcwtBbWQibENDXTntvYXokssA1vF0qBNGYctftX/8C7Qa26F4hjhEDlVpBW1xse
+EWfyMk51Qw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_77434572-bdb8-407d-8ccc-1d4b067ef04b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>24vIipCIH4EeHpFMcoVkJHBBErUTUqH/3F/QqygB7/rJStF/nZqujueZ+rRlA0/a8zsSFugBVVlF
+xNTAJPktLw==</DigestValue></Reference></SignedInfo><SignatureValue>JwAN4wXeFhjvrQKtbgrHIybGE7N2SmQnG0r6eq4qZPhH1JK8J61NCuPr7w34MDrjJamwuyq0HknM
+gl/xS4Pt5B39bEglwFJpMOVNBO/ncOdS63cgo5y2nPYDh0MKpf0RYdXm/+JDsxt3oy0maxDMu2E9
+6WY5hdwyaJCRjVCLpUGHr/gF8rrcwHz4Pv3Nrb6S3AgtPYFubDTOcz5DrVuOJAjidgaM4LXy3ODi
+z7mbixjTfZZf7RGaejN/2l6EibaEyZVw/SuZgnWOWxH3DuNHfPcnadWG2wbeipi7wR5DzRhFNIAp
+cFyi+bupu7QGZS0tTVoaA+W/4IkWqbvosdflIg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -244,4 +244,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_28b7b1a0-abe7-4b3b-8096-3d8afb7fb254" Target="#_eb490374-e88d-4ef0-92f2-c100d09955b9"><Timestamp>2018-11-20 14:49:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_77434572-bdb8-407d-8ccc-1d4b067ef04b" Target="#_1f9f1b15-f856-4730-8d41-f14ab4f4da59"><Timestamp>2018-11-20 14:54:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
