@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendJSON:JSONFileConnection Encoding="UTF-8" JSONFilePath="D:/POC_Talend/DocsPomona/docs Pomona/20180702 article .json" dataPackage="_bZ7D3X6NEeiKw-aV7fHe5g" name="S520_PIM_Liste_Article" readbyMode="JSONPATH" xmi:id="_bZ7D0X6NEeiKw-aV7fHe5g">
+    <schema AbsoluteXPathQuery="$.entries[*]" LimitBoucle="0" xmi:id="_bZ7D0n6NEeiKw-aV7fHe5g">
+      <schemaTargets RelativeXPathQuery="properties.dc:created" TagName="DateHeureCreation" xmi:id="_nhRr0K-QEeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.dc:modified" TagName="DatHeureModification " xmi:id="_tKc3oKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:codeERP" TagName="CodeArticleERP" xmi:id="_tNlrMKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:referentBranch" TagName="BrancheReferente_voc" xmi:id="_tPE48KqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:typeOfArticle" TagName="TypeArticle_voc" xmi:id="_tQa8wKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:baseUnit" TagName="UniteQuantiteBaseSAP_voc" xmi:id="_Bm2tkK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:range" TagName="Gamme_voc" xmi:id="_NIoHoK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:file" TagName="FileAchat_voc" xmi:id="_SYDZ4K-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:productHierarchyCode6" TagName="HierarchieProduitNiv6_voc" xmi:id="_Sbo5YK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:pricingHorizon" TagName="HorizonTarification_voc" xmi:id="_SdkzEK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:industrialBrand" TagName="MarqueIndustrielle_voc" xmi:id="_SgPskK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.partsmd:commercialBrand" TagName="MarqueCommerciale_voc" xmi:id="_SiCcUK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.partsbmd:billingUnit" TagName="UniteFacturation_voc" xmi:id="_SnZdcK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodad:technicalSheet.data" TagName="FicheTechniqueFournisseur" xmi:id="_SpMNMK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodad:securityForm" TagName="FicheSecurite" xmi:id="_Sq-V4K-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodg:regulatoryName" TagName="DenominationReglementaire" xmi:id="_Sx1L0K-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodg:dryWeight" TagName="PoidsNetEgouttePiece" xmi:id="_SzeKkK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodg:totalLife" TagName="DureeVieTotaleProduit" xmi:id="_S1pU0K-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodq:typeOfConservation" TagName="TypeConservationProduit_voc" xmi:id="_S3STkK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:peanut" TagName="Allergene_Arachide" xmi:id="_VVTOIK-REeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:celery" TagName="Allergene_Celeri" xmi:id="_tR6KgKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:crustacean" TagName="Allergene_Crustaces" xmi:id="_tTiiMKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:egg" TagName="Allergene_Oeuf" xmi:id="_tU83cKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:fish" TagName="Allergene_Poisson" xmi:id="_tWaQAKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:gluten" TagName="Allergene_Gluten" xmi:id="_tYCAoKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:lupine" TagName="Allergene_Lupin" xmi:id="_tZYEcKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:milk" TagName="Allergene_Lait" xmi:id="_tbSwAKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:mollusc" TagName="Allergene_Mollusques" xmi:id="_tdYasKqqEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:mustard" TagName="Allergene_Moutarde" xmi:id="_JRqZ8KqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:noDeclared" TagName="Allergene_AucunSignale" xmi:id="_JTov4KqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:sesame" TagName="Allergene_Sesame" xmi:id="_J1cccKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:soy" TagName="Allergene_Soja" xmi:id="_J3hgEKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pproda:sulphite" TagName="Allergene_Sulfite" xmi:id="_GRZRcKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:celery" TagName="TracesAllergene_Celeri" xmi:id="_JVtMcKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:crustacean" TagName="TracesAllergene_Crustaces" xmi:id="_JXwa4KqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:egg" TagName="TracesAllergene_Oeuf" xmi:id="_JZ_2kKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:fish" TagName="TracesAllergene_Poisson" xmi:id="_Jb9lcKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:gluten" TagName="TracesAllergene_Gluten" xmi:id="_JeDQIKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:lupine" TagName="TracesAllergene_Lupin" xmi:id="_JgITwKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:milk" TagName="TracesAllergene_Lait" xmi:id="_JiCYQKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:mollusc" TagName="TracesAllergene_Mollusques" xmi:id="_Jk3p0KqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:mustard" TagName="TracesAllergene_Moutarde" xmi:id="_Jm-ioKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:noDeclared" TagName="TracesAllergene_Aucune trace signalee" xmi:id="_JpENUKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:peanut" TagName="TracesAllergene_Arachide" xmi:id="_JrIp4KqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:sesame" TagName="TracesAllergene_Sesame" xmi:id="_JtEjkKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:soy" TagName="TracesAllergene_Soja" xmi:id="_JvKOQKqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodat:sulphite" TagName="TracesAllergene_Sulfite" xmi:id="_JxP48KqrEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodc:ingredientsList" TagName="ListeIngredients" xmi:id="_NXmfIKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodc:withoutConservativeAgent" TagName="SansConservateur" xmi:id="_Nni_oKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodc:withoutPalmOil" TagName="SansHuilePalme" xmi:id="_NqEvMKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodcd:appDomain" TagName="DomaineApplicationPrincipale" xmi:id="_NsUK4KqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodcd:materialNeeded" TagName="MaterielNecessaire" xmi:id="_NxFWIKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodcd:useAdvice" TagName="ConseilUtilisation" xmi:id="_NzUx0KqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodd:withoutPork" TagName="SansPorc" xmi:id="_N1n34KqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:energeticValueKJ" TagName="ValeurEnergetiqueKJ" xmi:id="_N38zIKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:fattyAcidLevel" TagName="TauxAcideGrasTrans" xmi:id="_N6IkcKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodq:pH" TagName="pH" xmi:id="_wwtVwLASEeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodcd:density" TagName="Densite" xmi:id="_4t5OwLASEeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:proteins" TagName="Proteines" xmi:id="_N8Z1UKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:saturatedFatLevel" TagName="DontAcidesGrasSatures" xmi:id="_N-ya8KqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:sodium" TagName="Sodium" xmi:id="_yU0Y0KqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:totalSimpleSugars" TagName="EquivalentSel" xmi:id="_ydPVAKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:unitGrOrMl" TagName="Unite" xmi:id="_yhQ5YKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodnf:NFEN1040" TagName="NF_EN_1040" xmi:id="_ylSdwKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodnf:NFEN1275" TagName="NF_EN_1275" xmi:id="_ypK4MKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodnf:NFEN1276" TagName="NF_EN_1276" xmi:id="_ytMckKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodnf:NFEN12791" TagName="NF_EN_12791" xmi:id="_yxS5cKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodnf:NFEN13727" TagName="NF_EN_13727" xmi:id="_y1T2wKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodnf:NFEN1499" TagName="NF_EN_1499" xmi:id="_y5RwwKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodnf:NFEN1500" TagName="NF_EN_1500" xmi:id="_y9SuEKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodnf:NFEN1650" TagName="NF_EN_1650" xmi:id="_zBTEUKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodoc:geneticallyModified" TagName="ProduitGenetiquementModifie" xmi:id="_zFUosKqsEeim7pyZTd3J5Q"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodcd:foodContactApproval" TagName="AgrementContactAlimentaire" xmi:id="_bHKlALATEeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.partmd:pndWording" TagName="LibellePND" xmi:id="_yib-ALBSEeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodcd:dilution" TagName="Dilution" xmi:id="_Cc858LBTEeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodcd:temperature" TagName="Temperature" xmi:id="_C88ooLBTEeiL_4pXP2NcDQ"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodcd:contactTime" TagName="ContactTime" xmi:id="_AxihALBTEeiL_4pXP2NcDQ"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile dataManager="_bZ7D0X6NEeiKw-aV7fHe5g" name="default" xmi:id="_bZ7D3X6NEeiKw-aV7fHe5g">
+    <ownedElement id="_pllOEH6JEeiKw-aV7fHe5g" label="metadata" xmi:id="_bZ7D3n6NEeiKw-aV7fHe5g" xsi:type="TalendMetadata:MetadataTable">
+      <feature label="DateHeureCreation" length="24" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpMLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="DatHeureModification" length="24" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpMbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="CodeArticleERP" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpMrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="BrancheReferente_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpM7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TypeArticle_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpNLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="UniteQuantiteBaseSAP_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpNbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Gamme_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpNrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="FileAchat_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpN7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="HierarchieProduitNiv6_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpOLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="HorizonTarification_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpObBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="MarqueIndustrielle_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpOrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="MarqueCommerciale_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpO7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="UniteFacturation_voc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpPLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="FicheTechniqueFournisseur" length="170" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpPbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="FicheSecurite" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpPrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="DenominationReglementaire" length="35" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpP7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="PoidsNetEgouttePiece" length="5" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpQLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="DureeVieTotaleProduit" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpQbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TypeConservationProduit_voc" length="2" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpQrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Arachide" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpQ7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Celeri" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpRLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Crustaces" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpRbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Oeuf" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpRrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Poisson" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpR7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Gluten" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpSLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Lupin" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpSbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Lait" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpSrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Mollusques" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpS7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Moutarde" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpTLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_AucunSignale" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpTbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Sesame" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpTrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Soja" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpT7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Allergene_Sulfite" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpULBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Celeri" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpUbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Crustaces" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpUrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Oeuf" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpU7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Poisson" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpVLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Gluten" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpVbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Lupin" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpVrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Lait" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpV7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Mollusques" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpWLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Moutarde" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpWbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Aucune_trace_signalee" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpWrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Arachide" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpW7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Sesame" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpXLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Soja" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpXbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TracesAllergene_Sulfite" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpXrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ListeIngredients" length="74" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpX7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="SansConservateur" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpYLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="SansHuilePalme" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpYbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="DomaineApplicationPrincipale" length="43" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpYrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="MaterielNecessaire" length="11" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpY7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ConseilUtilisation" length="29" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpZLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="SansPorc" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpZbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ValeurEnergetiqueKJ" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpZrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="TauxAcideGrasTrans" length="1" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpZ7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pH" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpaLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Densite" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpabBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Proteines" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfparBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="DontAcidesGrasSatures" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpa7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Sodium" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpbLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="EquivalentSel" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpbbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Unite" length="5" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpbrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="NF_EN_1040" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpb7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="NF_EN_1275" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpcLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="NF_EN_1276" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpcbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="NF_EN_12791" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpcrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="NF_EN_13727" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpc7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="NF_EN_1499" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpdLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="NF_EN_1500" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpdbBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="NF_EN_1650" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpdrBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ProduitGenetiquementModifie" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpd7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="AgrementContactAlimentaire" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpeLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="LibellePND" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpebBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Dilution" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfperBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="Temperature" length="4" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpe7BTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="ContactTime" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_UAfpfLBTEeiL_4pXP2NcDQ" xsi:type="TalendMetadata:MetadataColumn"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_58446149-09ba-49d0-a6c7-5a9ca8fbcfd3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PODinNr9TpIK+uWYuiO2EmHyUZx2zEo2PNomk2LheP9q8JscDbzlwmn0zGyVU0id3jLezh48rdwL
+fFJ349XY2g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dfae5144-89f9-41d1-b98c-946a478b6675"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rUU7ed8ZEjug0Ug2ri5npIunutYTwgGgwu5+VvIyw/86Qycu1RdW4AlrIX4OAis2IQzUqLsRv16W
+f1MWktsjyQ==</DigestValue></Reference></SignedInfo><SignatureValue>K86fP5otz5OFnVSzmdA5q26wjmfm7gctwDi6Ai+Z2DcaYwnoYRQ9Fv3JnXrUbxtIp4GLU+uPLdhY
+D4EFmjyBPMRX+o2ZbDem1GfVqeHm/Sco+LYB49Ba7hyxn2n+4jLS8bnFW0dandtEvt7ZGj8bdrnP
+zWlTDEgH2zI9tvjuHiLsldsbkPouFp+lsGoJ5tXI5FTnipoI2kG2nAP2SCmWAHBg6+HLoZmTZn23
+6AcaMHBa57Xb4MYIq0uHzhzNZgcb0JsSDhbtQq5xe7FeD854i/FotXps0rYVfMPCR9eKiQUBT9/T
+hwokxsqDPfcMiG9XxSoFVnKpJTBoovBZUs8qcg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dfae5144-89f9-41d1-b98c-946a478b6675" Target="#_58446149-09ba-49d0-a6c7-5a9ca8fbcfd3"><Timestamp>2018-11-22 10:45:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

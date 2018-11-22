@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:version="2.0">
+  <talendfile:ContextType confirmationNeeded="false" name="DEV" xmi:id="_yw5tYO5DEeiW0LNZKTt8Jw">
+    <contextParameter comment="" name="C010_NUXEO_SERVER" prompt="C010_NUXEO_SERVER?" promptNeeded="false" type="id_String" value="http://recpim/nuxeo/api/v1/" xmi:id="_yw5tYe5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_METHOD_GETBATCHID" prompt="C010_NUXEO_METHOD_GETBATCHID?" promptNeeded="false" type="id_String" value="upload/" xmi:id="_yw5tYu5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_AUTHORIZATION_CODE" prompt="C010_NUXEO_AUTHORIZATION_CODE?" promptNeeded="false" type="id_String" value="Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y" xmi:id="_yw5tY-5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_METHOD_UPLOAD" prompt="C010_NUXEO_METHOD_UPLOAD?" promptNeeded="false" type="id_String" value="/0/" xmi:id="_yw5tZO5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_METHOD_LIST_ARTICLES" prompt="C010_NUXEO_METHOD_LIST_ARTICLES?" promptNeeded="false" type="id_String" value="search/lang/NXQL/execute" xmi:id="_yw5tZe5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_PARAM_LIST_ARTICLES" prompt="C010_NUXEO_PARAM_LIST_ARTICLES?" promptNeeded="false" type="id_String" value="select * from document  WHERE ecm:primaryType='pomArticle'" xmi:id="_yw5tZu5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_AUTHORIZATION_TOKEN" prompt="C010_NUXEO_AUTHORIZATION_TOKEN?" promptNeeded="false" type="id_String" value="a71c1bf2-9f31-416d-a51f-bfe38b2e06f2" xmi:id="_yw5tZ-5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_METHOD_VOCABULARY" prompt="C010_NUXEO_METHOD_VOCABULARY?" promptNeeded="false" type="id_String" value="https://pp-produits.groupe-pomona.fr/nuxeo/api/v1/directory/" xmi:id="_yw5taO5DEeiW0LNZKTt8Jw"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="PROD" xmi:id="_yw5tae5DEeiW0LNZKTt8Jw">
+    <contextParameter comment="" name="C010_NUXEO_SERVER" prompt="C010_NUXEO_SERVER?" promptNeeded="false" type="id_String" value="http://recpim/nuxeo/api/v1/" xmi:id="_yw5tau5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_METHOD_GETBATCHID" prompt="C010_NUXEO_METHOD_GETBATCHID?" promptNeeded="false" type="id_String" value="upload/" xmi:id="_yw5ta-5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_AUTHORIZATION_CODE" prompt="C010_NUXEO_AUTHORIZATION_CODE?" promptNeeded="false" type="id_String" value="Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y" xmi:id="_yw5tbO5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_METHOD_UPLOAD" prompt="C010_NUXEO_METHOD_UPLOAD?" promptNeeded="false" type="id_String" value="/0/" xmi:id="_yw5tbe5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_METHOD_LIST_ARTICLES" prompt="C010_NUXEO_METHOD_LIST_ARTICLES?" promptNeeded="false" type="id_String" value="search/lang/NXQL/execute" xmi:id="_yw5tbu5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_PARAM_LIST_ARTICLES" prompt="C010_NUXEO_PARAM_LIST_ARTICLES?" promptNeeded="false" type="id_String" value="select * from document  WHERE ecm:primaryType='pomArticle'" xmi:id="_yw5tb-5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_AUTHORIZATION_TOKEN" prompt="C010_NUXEO_AUTHORIZATION_TOKEN?" promptNeeded="false" type="id_String" value="a71c1bf2-9f31-416d-a51f-bfe38b2e06f2" xmi:id="_yw5tcO5DEeiW0LNZKTt8Jw"/>
+    <contextParameter comment="" name="C010_NUXEO_METHOD_VOCABULARY" prompt="C010_NUXEO_METHOD_VOCABULARY?" promptNeeded="false" type="id_String" value="https://pp-produits.groupe-pomona.fr/nuxeo/api/v1/directory/" xmi:id="_yw5tce5DEeiW0LNZKTt8Jw"/>
+  </talendfile:ContextType>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f718482c-4eee-4da8-8d7f-c53fa874dc39"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l4onPzgaY1EHtDCkNcFjD+xHmFS2yWrEyDj5pJqaGAox70QlJtZ5mTvwIBN+YvxWY9gaxOVCfoVy
+nUH24Uk/ag==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2997871a-74e4-43ad-b355-4aa4a0c9f776"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sN/s44noANEguDhzOKnzV71Sf0hCP3JVEFxe1J5OaWo43K0oT07LDPhaXxgEzeT7Lx4xiYfytmsB
+QaUQjj43kg==</DigestValue></Reference></SignedInfo><SignatureValue>03vlC/7V4ooNZKkeNaDdI44kM2wBZPO9I8lmGAxSePv4ro9SHjfg/VeJW7N9RQUTn7aP8Sa2CeKy
+U4qsy7mfGWDsgZuwrnA1cSzaqs3g72fXTzFv8CoI8EXac+N+VDrgDqKc1MXrtBw/Qy/0QZx5zR8O
+CaPd/QqGG4+mO9ml3pKIQvBgeQY3hz9O/kido5mpKT8Zgt6+hq9l2qWHr05MY/wiGL8TCZaVPCeN
+0bO3pM1cvvO3LnLsnz/0tuKtgGk0sHMM9btmSrf6FMRIsrAzhrnftw7S6GS+qO8gw0e4Gw/KAt7N
+PlvkxHL1CaPvdeB6U1c3F0RMgJyGmXCVjYECtg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2997871a-74e4-43ad-b355-4aa4a0c9f776" Target="#_f718482c-4eee-4da8-8d7f-c53fa874dc39"><Timestamp>2018-11-22 10:45:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendJSON:JSONFileConnection Encoding="UTF-8" JSONFilePath="D:/POC_Talend/DocsPomona/docs Pomona/articles-UC32.json" dataPackage="_rZj-XX63Eeifv_FHNBBO9g" name="S530_PIM_Article_UC32" readbyMode="JSONPATH" xmi:id="_rZj-QH63Eeifv_FHNBBO9g">
+    <schema AbsoluteXPathQuery="$.entries[*]" LimitBoucle="0" xmi:id="_rZj-QX63Eeifv_FHNBBO9g">
+      <schemaTargets RelativeXPathQuery="properties.partsbmd:vocalPreparationWording" TagName="numeroArticle" xmi:id="_rZj-Qn63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:withoutEnergySupply" TagName="pprodna_withoutEnergySupply" xmi:id="_rZj-Q363Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:lowSugarContent" TagName="pprodna_lowSugarContent" xmi:id="_rZj-RH63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:noSaturatedFats" TagName="pprodna_noSaturatedFats" xmi:id="_rZj-RX63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:lowInSaturatedFat" TagName="pprodna_lowInSaturatedFat" xmi:id="_rZj-Rn63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:lowInSodiumOrSalt" TagName="pprodna_lowInSodiumOrSalt" xmi:id="_rZj-R363Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:veryLowInSodiumOrSalt" TagName="pprodna_veryLowInSodiumOrSalt" xmi:id="_rZj-SH63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:lowFatContent" TagName="pprodna_lowFatContent" xmi:id="_rZj-SX63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:noSugar" TagName="pprodna_noSugar" xmi:id="_rZj-Sn63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:reducedEnergyValue" TagName="pprodna_reducedEnergyValue" xmi:id="_rZj-S363Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:noSugarAdded" TagName="pprodna_noSugarAdded" xmi:id="_rZj-TH63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:sourceOfFibers" TagName="pprodna_sourceOfFibers" xmi:id="_rZj-TX63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:sourceOfProteins" TagName="pprodna_sourceOfProteins" xmi:id="_rZj-Tn63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:richInFibers" TagName="pprodna_richInFibers" xmi:id="_rZj-T363Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:lowEnergyValue" TagName="pprodna_lowEnergyValue" xmi:id="_rZj-UH63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:noSaltAdded" TagName="pprodna_noSaltAdded" xmi:id="_rZj-UX63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:noFat" TagName="pprodna_noFat" xmi:id="_rZj-Un63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:richInProteins" TagName="pprodna_richInProteins" xmi:id="_rZj-U363Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodna:noSalt" TagName="pprodna_noSalt" xmi:id="_rZj-VH63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:totalSimpleSugars" TagName="pprodn_totalSimpleSugars" xmi:id="_rZj-VX63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:fattyAcidLevel" TagName="pprodn_fattyAcidLevel" xmi:id="_rZj-Vn63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:proteins" TagName="pprodn_proteins" xmi:id="_rZj-V363Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:energeticValueKCal" TagName="pprodn_energeticValueKCal" xmi:id="_rZj-WH63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:saturatedFatLevel" TagName="pprodn_saturatedFatLevel" xmi:id="_rZj-WX63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:saltEquivalent" TagName="pprodn_saltEquivalent" xmi:id="_rZj-Wn63Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:fibers" TagName="pprodn_fibers" xmi:id="_rZj-W363Eeifv_FHNBBO9g"/>
+      <schemaTargets RelativeXPathQuery="properties.pprodn:unitGrOrMl" TagName="pprodn_unitGrOrMl" xmi:id="_rZj-XH63Eeifv_FHNBBO9g"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile dataManager="_rZj-QH63Eeifv_FHNBBO9g" name="default" xmi:id="_rZj-XX63Eeifv_FHNBBO9g">
+    <ownedElement id="_62l0UH60Eeifv_FHNBBO9g" label="metadata" xmi:id="_rZj-Xn63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataTable">
+      <feature label="numeroArticle" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-X363Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_withoutEnergySupply" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-YH63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_lowSugarContent" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-YX63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_noSaturatedFats" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-Yn63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_lowInSaturatedFat" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-Y363Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_lowInSodiumOrSalt" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-ZH63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_veryLowInSodiumOrSalt" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-ZX63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_lowFatContent" length="13" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-Zn63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_noSugar" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-Z363Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_reducedEnergyValue" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-aH63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_noSugarAdded" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-aX63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_sourceOfFibers" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-an63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_sourceOfProteins" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-a363Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_richInFibers" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-bH63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_lowEnergyValue" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-bX63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_noSaltAdded" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-bn63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_noFat" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-b363Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_richInProteins" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-cH63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodna_noSalt" length="3" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-cX63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodn_totalSimpleSugars" length="10" pattern="&quot;dd-MM-yyyy&quot;" precision="2" talendType="id_Float" xmi:id="_rZj-cn63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodn_fattyAcidLevel" length="10" pattern="&quot;dd-MM-yyyy&quot;" precision="2" talendType="id_Float" xmi:id="_rZj-c363Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodn_proteins" length="10" pattern="&quot;dd-MM-yyyy&quot;" precision="2" talendType="id_Float" xmi:id="_rZj-dH63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodn_energeticValueKCal" length="10" pattern="&quot;dd-MM-yyyy&quot;" precision="2" talendType="id_Float" xmi:id="_rZj-dX63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodn_saturatedFatLevel" length="10" pattern="&quot;dd-MM-yyyy&quot;" precision="2" talendType="id_Float" xmi:id="_rZj-dn63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodn_saltEquivalent" length="10" pattern="&quot;dd-MM-yyyy&quot;" precision="2" talendType="id_Float" xmi:id="_rZj-d363Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodn_fibers" length="10" pattern="&quot;dd-MM-yyyy&quot;" precision="2" talendType="id_Float" xmi:id="_rZj-eH63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+      <feature label="pprodn_unitGrOrMl" length="5" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_rZj-eX63Eeifv_FHNBBO9g" xsi:type="TalendMetadata:MetadataColumn"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_942e1554-c685-440b-a118-43e239e11e54"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MouI9TKSqA3+o0hSC7Nf8mqX/2/FbG6WNPDcFUZ9qAiWHTvOCfpfYm1L+9xpslCJLinvSYk5rNag
+QOzYUN42aw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b4884512-3156-4e29-8de6-25a6bf33f279"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L/c8+y+mJ1T1DQ0VaGQRpkzNLr3CStLUhkQTS1uHhMAaRPLLJwGs8fX2akHzah7f6rjM69IBTgfp
+Db4jSDkCSg==</DigestValue></Reference></SignedInfo><SignatureValue>GpNJ8Smb4vSs3Ii1YhdQtzhYJhy7oDwEtZeHkRIC7pw4pxgVUwo1ICXGTL6o6JRTt699WyiaXPbc
+0GPw6260IG+oLsxYR/pnn+oklRySN9M6zsuMmB1Acfnmfu2DDja37tA1R0nbLBTxx4RojIVIqHFk
+GEIoMYQhDjwlR9ffExqZUvhkxf0FYEJLrlnxM9Q5zUHoVCVhxZ40AgKf7kjoK1sKli7265NuiP8u
+8N30d8IpMbZTsSP3CQ1WD7Tsu2WMaFxLqv7PdlazY9lTXg/v0r9/KWztzPKEFJx9bi9PHepcc1Zv
+QMf63xyXTrQRRY7+PySKl3d393hKI+3FpidLfw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b4884512-3156-4e29-8de6-25a6bf33f279" Target="#_942e1554-c685-440b-a118-43e239e11e54"><Timestamp>2018-11-22 10:45:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

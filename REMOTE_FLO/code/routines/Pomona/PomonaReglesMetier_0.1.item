@@ -1,0 +1,466 @@
+package routines;
+public class PomonaReglesMetier {
+
+	
+	/**
+	 * 
+	 * @param allegation_noFat
+	 * @param allegation_lowFatContent
+	 * @param saturatedFatLevel
+	 * @param unitGrOrMl
+	 * @return
+	 */
+	public static String verif_matieres_grasses(String allegation_noFat, String allegation_lowFatContent, Float saturatedFatLevel , String unitGrOrMl) {
+		String lResult = "";
+		
+		lResult += verif_sans_matieres_grasses(allegation_noFat,saturatedFatLevel,unitGrOrMl);
+		lResult += verif_faible_teneur_matieres_grasses(allegation_lowFatContent,saturatedFatLevel,unitGrOrMl);
+		
+		return lResult;
+	}
+	
+
+	private static String verif_sans_matieres_grasses (String noFat , Float saturatedFatLevel , String unitGrOrMl) {		
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(noFat) && saturatedFatLevel != null) {
+			check = (saturatedFatLevel.compareTo(new Float("0.5"))==-1);
+			if (!check)
+				lResult = "Erreur dans verif_sans_matieres_grasses vs 0.5|"; 
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_faible_teneur_matieres_grasses (String lowFatContent , Float saturatedFatLevel , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(lowFatContent) && saturatedFatLevel != null) {
+			if ("100g".equalsIgnoreCase(unitGrOrMl)) {
+				check = (saturatedFatLevel.compareTo(new Float("3"))==-1);
+				if (!check)
+					lResult = "Erreur dans verif_faible_teneur_matieres_grasses "+saturatedFatLevel+" vs 3|"; 
+			} else {
+				check = (saturatedFatLevel.compareTo(new Float("1.5"))==-1);	
+				if (!check)
+					lResult = "Erreur dans verif_faible_teneur_matieres_grasses "+saturatedFatLevel+" vs 1.5|"; 
+			}
+		}
+		
+		
+		return lResult;
+	}
+	
+	
+
+	public static String verif_graisses_saturees(String allegation_noSaturatedFats, String allegation_lowInSaturatedFat, Float fattyAcidLevel , String unitGrOrMl) {
+		String lResult = "";
+		
+		lResult += verif_sans_graisses_saturees(allegation_noSaturatedFats,fattyAcidLevel,unitGrOrMl);
+		lResult += verif_faible_teneur_graisses_saturees(allegation_lowInSaturatedFat,fattyAcidLevel,unitGrOrMl);
+		
+		return lResult;
+	}
+	
+	
+	private static String verif_sans_graisses_saturees (String noSaturatedFats , Float fattyAcidLevel , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(noSaturatedFats) && fattyAcidLevel !=null ) {
+			check = (fattyAcidLevel.compareTo(new Float("0.1"))==-1);	
+			if (!check)
+				lResult = "Erreur dans verif_sans_graisses_saturees "+fattyAcidLevel+" vs <0.1|"; 
+		}
+		
+		return lResult;
+	}
+	private static String verif_faible_teneur_graisses_saturees (String lowInSaturatedFat , Float fattyAcidLevel , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(lowInSaturatedFat) && fattyAcidLevel != null) {
+			if ("100g".equalsIgnoreCase(unitGrOrMl)) {
+				check = (fattyAcidLevel.compareTo(new Float("1.5"))==-1);
+				if (!check)
+					lResult = "Erreur dans verif_faible_teneur_graisses_saturees "+fattyAcidLevel+" vs <1.5|"; 
+			} else {
+				check = (fattyAcidLevel.compareTo(new Float("0.75"))==-1);	
+				if (!check)
+					lResult = "Erreur dans verif_faible_teneur_graisses_saturees "+fattyAcidLevel+" vs <0.75|"; 
+			}
+		}
+		
+		
+		return lResult;
+	}
+
+	
+	
+	
+	
+	
+	public static String verif_sucre(String allegation_lowSugarContent , String allegation_noSugar , String allegation_noSugarAdded ,  Float totalSimpleSugars , String unitGrOrMl) {
+		String lResult = "";
+		
+		lResult += verif_faible_teneur_sucre(allegation_lowSugarContent,totalSimpleSugars,unitGrOrMl);
+		lResult += verif_sans_sucre_ajoute(allegation_noSugarAdded,totalSimpleSugars,unitGrOrMl);
+		lResult += verif_sans_sucre(allegation_noSugar,totalSimpleSugars,unitGrOrMl);
+		
+		return lResult;
+	}
+	
+	private static String verif_sans_sucre (String noSugar , Float totalSimpleSugars , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(noSugar) && totalSimpleSugars != null) {
+			check = (totalSimpleSugars.compareTo(new Float("0.5"))==-1);	
+			if (!check)
+				lResult = "Erreur dans verif_sans_sucre "+totalSimpleSugars+" vs <0.5"; 
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_sans_sucre_ajoute (String noSugarAdded , Float totalSimpleSugars , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+//TODO a vérif
+		if ("oui".equalsIgnoreCase(noSugarAdded) && totalSimpleSugars != null) {
+			check = (totalSimpleSugars.compareTo(new Float("0.5"))==-1);	
+			if (!check)
+				lResult = "Erreur dans verif_sans_sucre_ajoute "+totalSimpleSugars+" vs <0.5|"; 
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_faible_teneur_sucre (String lowSugarContent , Float totalSimpleSugars , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(lowSugarContent) && totalSimpleSugars != null) {
+			if ("100g".equalsIgnoreCase(unitGrOrMl)) {
+				check = (totalSimpleSugars.compareTo(new Float("5"))==-1);
+				if (!check)
+					lResult = "Erreur dans verif_faible_teneur_sucre "+totalSimpleSugars+" vs <5|"; 
+			} else {
+				check = (totalSimpleSugars.compareTo(new Float("2.5"))==-1);	
+				if (!check)
+					lResult = "Erreur dans verif_faible_teneur_sucre "+totalSimpleSugars+" vs <2.5|"; 
+			}
+		}
+		
+		
+		return lResult;
+	}
+	
+	
+	
+	
+	
+
+	
+	
+	public static String verif_fibres(String allegation_richInFibers, String allegation_sourceOfFibers, Float fibers , String unitGrOrMl) {
+		String lResult = "";
+
+		lResult += verif_rich_fibres(allegation_richInFibers,fibers,unitGrOrMl);
+		lResult += verif_source_fibres(allegation_sourceOfFibers,fibers,unitGrOrMl);
+		
+		return lResult;
+	}
+	
+	private static String verif_rich_fibres (String richInFibers , Float fibers , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(richInFibers) && fibers != null) {
+			if ("100g".equalsIgnoreCase(unitGrOrMl)) {
+				check = (fibers.compareTo(new Float("6"))==1);
+				if (!check)
+					lResult = "Erreur dans verif_rich_fibres "+fibers+" vs >6|"; 
+			} else {
+				check = (fibers.compareTo(new Float("3"))==1);	
+				if (!check)
+					lResult = "Erreur dans verif_rich_fibres "+fibers+" vs >3|"; 
+			}
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_source_fibres (String sourceOfFibers , Float fibers , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(sourceOfFibers) && fibers != null) {
+			if ("100g".equalsIgnoreCase(unitGrOrMl)) {
+				check = (fibers.compareTo(new Float("3"))==1);
+				if (!check)
+					lResult = "Erreur dans verif_source_fibres "+fibers+" vs >3|"; 
+			} else {
+				check = (fibers.compareTo(new Float("1.5"))==1);	
+				if (!check)
+					lResult = "Erreur dans verif_source_fibres "+fibers+" vs >1.5|"; 
+			}
+		}
+		
+		
+		return lResult;
+	}
+	
+	
+	
+	
+	
+
+	public static String verif_proteines(String allegation_richInProteins , String allegation_sourceOfProteins, Float proteins, Float energeticValueKCal , String unitGrOrMl) {
+		String lResult = "";
+		
+		lResult += verif_riche_proteines(allegation_richInProteins,proteins,energeticValueKCal,unitGrOrMl);
+		lResult += verif_source_proteines(allegation_sourceOfProteins,proteins,energeticValueKCal,unitGrOrMl);
+		
+		
+		return lResult;
+	}
+	
+	private static String verif_riche_proteines (String richInProteins , Float proteins, Float energeticValueKCal , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+
+		
+		if ("oui".equalsIgnoreCase(richInProteins) && proteins != null && energeticValueKCal != null) {
+			
+			Float currentValue = proteins*4;
+			Float limit = Float.valueOf(""+(energeticValueKCal*0.2));
+
+			check = (currentValue.compareTo(limit)==1);
+			if (!check)
+				lResult = "Erreur dans verif_riche_proteines "+currentValue+" vs >"+limit+"|"; 
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_source_proteines (String sourceOfProteins , Float proteins, Float energeticValueKCal , String unitGrOrMl) {
+		String lResult = "";
+
+		boolean check = true;
+
+		
+		if ("oui".equalsIgnoreCase(sourceOfProteins) && proteins != null && energeticValueKCal != null) {
+			
+			Float currentValue = proteins*4;
+			Float limit = Float.valueOf(""+(energeticValueKCal*0.12));
+
+			check = (currentValue.compareTo(limit)==1);
+			if (!check)
+				lResult = "Erreur dans verif_source_proteines "+currentValue+" vs >"+limit+"|"; 
+		}
+		
+		
+		return lResult;
+	}
+	
+	
+	
+	
+	
+	
+
+
+	public static String verif_sodium_sel(String allegation_lowInSodiumOrSalt , String allegation_veryLowInSodiumOrSalt , String allegation_noSalt , String allegation_noSaltAdded , Float saltEquivalent , String unitGrOrMl) {
+		String lResult = "";
+
+		lResult += verif_pauvre_sodium_ou_sel(allegation_lowInSodiumOrSalt, saltEquivalent ,unitGrOrMl);
+		lResult += verif_tres_pauvre_sodium_ou_sel(allegation_veryLowInSodiumOrSalt, saltEquivalent ,unitGrOrMl);
+		lResult += verif_sans_sel(allegation_noSalt, saltEquivalent ,unitGrOrMl);
+		lResult += verif_sans_sel_ajoute(allegation_noSaltAdded, saltEquivalent ,unitGrOrMl);
+				
+		return lResult;
+	}
+	
+	
+	
+	private static String verif_pauvre_sodium_ou_sel (String lowInSodiumOrSalt , Float saltEquivalent , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(lowInSodiumOrSalt) && saltEquivalent != null) {
+			check = (saltEquivalent.compareTo(new Float("0.12"))==-1);	
+			if (!check)
+				lResult = "Erreur dans veryLowInSodiumOrSalt "+saltEquivalent+" vs <0.12|"; 
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_tres_pauvre_sodium_ou_sel (String veryLowInSodiumOrSalt , Float saltEquivalent , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(veryLowInSodiumOrSalt) && saltEquivalent != null) {
+			check = (saltEquivalent.compareTo(new Float("0.04"))==-1);	
+			if (!check)
+				lResult = "Erreur dans verif_sans_sel "+saltEquivalent+" vs <0.04|"; 
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_sans_sel (String noSalt , Float saltEquivalent , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(noSalt) && saltEquivalent !=  null) {
+			check = (saltEquivalent.compareTo(new Float("0.005"))==-1);	
+			if (!check)
+				lResult = "Erreur dans verif_sans_sel "+saltEquivalent+" vs <0.005|"; 
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_sans_sel_ajoute (String noSaltAdded , Float saltEquivalent , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(noSaltAdded) && saltEquivalent != null) {
+//TODO a verif			
+			check = (saltEquivalent.compareTo(new Float("0.05"))==-1);	
+			if (!check)
+				lResult = "Erreur dans verif_sans_sel_ajoute "+saltEquivalent+" vs <0.05|"; 
+		}
+		
+		
+		return lResult;
+	}
+	
+	
+	
+	
+	
+	
+
+
+	public static String verif_valeur_energetique(String allegation_lowEnergyValue , String allegation_reducedEnergyValue , String allegation_withoutEnergySupply , Float energeticValueKCal , String unitGrOrMl) {
+		String lResult = "";
+
+		lResult += verif_faible_valeur_energetique(allegation_lowEnergyValue, energeticValueKCal , unitGrOrMl);
+		lResult += verif_valeur_energetique_reduite(allegation_reducedEnergyValue, energeticValueKCal , unitGrOrMl);
+		lResult += verif_sans_apport_energetique(allegation_withoutEnergySupply, energeticValueKCal , unitGrOrMl);
+		
+		return lResult;
+	}
+	
+	
+	
+	
+	
+	private static String verif_faible_valeur_energetique (String lowEnergyValue , Float energeticValueKCal , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(lowEnergyValue) && energeticValueKCal != null) {
+			if ("100g".equalsIgnoreCase(unitGrOrMl)) {
+				check = (energeticValueKCal.compareTo(new Float("40"))==-1);
+				if (!check)
+					lResult = "Erreur dans verif_faible_valeur_energetique "+energeticValueKCal+" vs <40|"; 
+			} else {
+				check = (energeticValueKCal.compareTo(new Float("20"))==-1);	
+				if (!check)
+					lResult = "Erreur dans verif_faible_valeur_energetique "+energeticValueKCal+" vs <20|"; 
+			}
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_valeur_energetique_reduite (String reducedEnergyValue , Float energeticValueKCal , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(reducedEnergyValue) && energeticValueKCal != null) {
+//TODO a verif			
+			if ("100g".equalsIgnoreCase(unitGrOrMl)) {
+				check = (energeticValueKCal.compareTo(new Float("40"))==-1);
+				if (!check)
+					lResult = "Erreur dans verif_valeur_energetique_reduite "+energeticValueKCal+" vs <40|"; 
+			} else {
+				check = (energeticValueKCal.compareTo(new Float("20"))==-1);	
+				if (!check)
+					lResult = "Erreur dans verif_valeur_energetique_reduite "+energeticValueKCal+" vs <20|"; 
+			}
+		}
+		
+		
+		return lResult;
+	}
+	private static String verif_sans_apport_energetique (String withoutEnergySupply , Float energeticValueKCal , String unitGrOrMl) {
+		String lResult = "";
+		
+		boolean check = true;
+		
+		if ("oui".equalsIgnoreCase(withoutEnergySupply) && energeticValueKCal != null) {
+			check = (energeticValueKCal.compareTo(new Float("4"))==-1);
+			if (!check)
+				lResult = "Erreur dans verif_sans_apport_energetique "+energeticValueKCal+" vs <4|"; 
+		}
+		
+		
+		return lResult;
+	}
+
+
+	
+	/**
+	 * Vérifie qui'une chaine passée en paramètre ne contient pas les caractères
+	 * ' " . @
+	 * @param aParam
+	 * @return
+	 */
+	public static boolean verif_extracaracters_libelle_sap(String aParam) {
+		if (aParam==null)
+			return false;
+		
+		if (aParam.indexOf("'")!=-1)
+			return false;
+		
+		if (aParam.indexOf(".")!=-1)
+			return false;
+		
+		if (aParam.indexOf("\"")!=-1)
+			return false;
+		
+		if (aParam.indexOf("@")!=-1)
+			return false;
+
+		
+		if (aParam.indexOf("a")!=-1)
+			return false;
+		
+		return true;
+	}
+	
+	
+}

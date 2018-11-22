@@ -1,0 +1,46 @@
+package routines;
+
+
+public class PomonaTechniques {
+	
+	
+	public static boolean isNullOrEmpty(String aSource) {
+		return (aSource==null) || "".equals(aSource);
+	}
+	
+	
+	public static String buildSQLCompareColumns(String aNomColonne1, String aNomColonne2, String aTestLibelle) {
+		return "case when t1."+aNomColonne1 + " = t2."+aNomColonne2 + " then 'Ok'"+
+				" else CONCAT('"+aNomColonne1+"= ',t1."+aNomColonne1+",' vs "+aNomColonne2+"= ',t2."+aNomColonne2+") END result_"+aTestLibelle;
+				
+	}
+	
+
+	public static String buildSQLcountLinesCompareTable( String aNomTable1, String aNomTable2) {
+		String lResult = "";
+		
+		if (aNomTable1==null || aNomTable2==null)
+			return null;
+		
+		return " select c1.count"+aNomTable1+""+
+		"    , c2.count"+aNomTable2+""+
+		"    , case when (c1.count"+aNomTable1+" = c2.count"+aNomTable2+")"+ 
+		"         then 'nombre de lignes identiques' "+
+		"         else concat('nombre de lignes différents : ', c1.count"+aNomTable1+" , ' dans "+aNomTable1+" vs ' , c2.count"+aNomTable2+" , ' dans "+aNomTable2+"') end result"+
+		" from (select count(1) count"+aNomTable1+" from "+aNomTable1+") c1,"+
+		" (select count(1) count"+aNomTable2+" from "+aNomTable2+") c2";		
+	}
+	
+	
+	
+	
+	public static String deletePrefixe(String aParam, String aPrefixe) {
+		if (aParam==null || aPrefixe==null)
+			return null;
+		
+		if (aParam.startsWith(aPrefixe))
+			return deletePrefixe(aParam.substring(aPrefixe.length()), aPrefixe);
+			else return aParam;
+		
+	}
+}

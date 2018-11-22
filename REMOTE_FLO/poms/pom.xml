@@ -13,6 +13,24 @@
     <module>jobs/process/tst_0.1</module>
     <module>jobs/process/tst_base_0.1</module>
     <module>jobs/process/hello711_0.1</module>
+    <module>jobs/process/POC/UC_DQM/uc33_verificationintersystemes_0.1</module>
+    <module>jobs/process/F10_PIM/F1020_PIM_TO_GRAPE_PND_PRESTO/f1020_000_extractionarticles_0.1</module>
+    <module>jobs/process/F10_PIM/tests_0.1</module>
+    <module>jobs/process/F10_PIM/F1010_PIM_TO_TALEND_REF/f1010_000_loadreferentiel_0.1</module>
+    <module>jobs/process/F10_PIM/F1020_PIM_TO_GRAPE_PND_PRESTO/generationfichierxml_0.1</module>
+    <module>jobs/process/POC/tempo_0.1</module>
+    <module>jobs/process/POC/f000_000_test_archive_0.1</module>
+    <module>jobs/process/F10_PIM/F1010_PIM_TO_TALEND_REF/f1010_010_loadvocabulary_0.1</module>
+    <module>jobs/process/POC/test_0.1</module>
+    <module>jobs/process/POC/UC_DQM/uc32_verifications2zones_0.1</module>
+    <module>jobs/process/POC/UC_DQM/uc33b_verificationintersystemes_0.1</module>
+    <module>jobs/process/POC/UC_ETL/uc22_extractiondonnees_0.1</module>
+    <module>jobs/process/F10_PIM/F1020_PIM_TO_GRAPE_PND_PRESTO/f1020_000_extractionarticles_old_0.1</module>
+    <module>jobs/process/F90_TALEND/F9000_Referentiels/f9000_000_loadreferenfiels_0.1</module>
+    <module>jobs/process/POC/alimtableref_0.1</module>
+    <module>jobs/process/POC/UC_ETL/uc21_integrationdonneesnonstructurees_0.1</module>
+    <module>jobs/process/POC/testlogs_0.1</module>
+    <module>jobs/process/POC/UC_DQM/uc31_verificationlibelle_0.1</module>
   </modules>
   <properties>
     <talend.project.name>REMOTE_FLO</talend.project.name>
