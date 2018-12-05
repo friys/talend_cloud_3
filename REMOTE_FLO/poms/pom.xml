@@ -36,13 +36,14 @@
     <module>jobs/process/tdie_0.1</module>
     <module>jobs/process/launch_tdie_0.1</module>
     <module>jobs/process/webhook/job_orchestre_0.1</module>
+    <module>jobs/process/webhook/job_lecture_param_webhook_0.1</module>
   </modules>
   <properties>
     <talend.project.name>REMOTE_FLO</talend.project.name>
     <encoding>UTF-8</encoding>
     <talend.version>7.1.1</talend.version>
-    <talend.docker.tag>${project.version}</talend.docker.tag>
     <maven.deploy.skip>true</maven.deploy.skip>
+    <talend.docker.tag>${project.version}</talend.docker.tag>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
   </properties>
   <build>
