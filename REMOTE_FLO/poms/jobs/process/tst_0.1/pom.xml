@@ -37,11 +37,16 @@
     <talend.job.id>_PWET8Oy4EeiKnJatvEeiPQ</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
-    <talend.job.folder></talend.job.folder>
     <talend.job.framework></talend.job.framework>
+    <talend.job.folder></talend.job.folder>
     <talend.job.type>Standard</talend.job.type>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>accessors-smart-1.1</artifactId>
+      <version>6.0.0</version>
+    </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>antlr-runtime-3.5.2</artifactId>
@@ -53,6 +58,16 @@
       <version>1.6.1</version>
     </dependency>
     <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>json-path-2.1.0</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>json-smart-2.2.1</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.17</version>
@@ -60,6 +75,16 @@
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>org.talend.dataquality.parser</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>slf4j-api-1.7.5</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>slf4j-log4j12-1.7.5</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -184,8 +209,8 @@
       <properties>
         <talend.pigudf.excludes.set>org.talend.pigudf.${talend.project.name.lowercase}:*</talend.pigudf.excludes.set>
         <talend.libraries.excludes.set>${talend.libraries.includes.set}</talend.libraries.excludes.set>
-        <talend.jobs.excludes.set>${project.groupId}:*</talend.jobs.excludes.set>
         <talend.code.excludes.set>org.talend.code.${talend.project.name.lowercase}:*</talend.code.excludes.set>
+        <talend.jobs.excludes.set>${project.groupId}:*</talend.jobs.excludes.set>
         <talend.libraries.includes.set>org.talend.libraries:*</talend.libraries.includes.set>
         <current.job.binaries.include>${project.groupId}:${project.artifactId}:${project.version}</current.job.binaries.include>
       </properties>

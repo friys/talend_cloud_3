@@ -723,6 +723,10 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_BOx2gPioEeilrYcxtAa48w",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "DQTechnical",
     "version" : "Latest",
     "type" : "routine"
@@ -782,6 +786,10 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
+  }, {
+    "id" : "_BOx2gPioEeilrYcxtAa48w - metadata",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
