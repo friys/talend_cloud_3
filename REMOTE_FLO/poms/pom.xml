@@ -145,13 +145,14 @@
     <module>jobs/process/other_m/test_redshift_0.1</module>
     <module>jobs/process/other_m/mydata/Agrege/myda_a_niv_tte_0.1</module>
     <module>jobs/process/other_m/mydata/Agrege/myda_a_niv_reg_0.1</module>
+    <module>jobs/process/other_m/ttt/test_ficheir_x_0.1</module>
   </modules>
   <properties>
     <talend.project.name>REMOTE_FLO</talend.project.name>
     <encoding>UTF-8</encoding>
     <talend.version>7.1.1</talend.version>
-    <maven.deploy.skip>true</maven.deploy.skip>
     <talend.docker.tag>${project.version}</talend.docker.tag>
+    <maven.deploy.skip>true</maven.deploy.skip>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
   </properties>
   <build>
