@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:version="2.0">
+  <talendfile:ContextType confirmationNeeded="false" name="developpement" xmi:id="_BU5uAAKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="regroupement_nature_contrat_File" prompt="regroupement_nature_contrat_File?" promptNeeded="false" type="id_File" value="/talend/fichiers_parametres/regroupement_nature_contrat.csv" xmi:id="_BU5uAQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_Header" prompt="regroupement_nature_contrat_Header?" promptNeeded="false" type="id_Integer" value="1" xmi:id="_BU5uAgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_FieldSeparator" prompt="regroupement_nature_contrat_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;" xmi:id="_BU5uAwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_Encoding" prompt="regroupement_nature_contrat_Encoding?" promptNeeded="false" type="id_String" value="ISO-8859-15" xmi:id="_BU5uBAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_RowSeparator" prompt="regroupement_nature_contrat_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;" xmi:id="_BU5uBQKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="production" xmi:id="_BU5uBgKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="regroupement_nature_contrat_File" prompt="regroupement_nature_contrat_File?" promptNeeded="false" type="id_File" value="M:/MX_DSI/DED/DOCUMENTATION/DECISIONNEL/PROJETS/MyData/30_Analyse technique/regroupement_nature_contrat.csv" xmi:id="_BU5uBwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_Header" prompt="regroupement_nature_contrat_Header?" promptNeeded="false" type="id_Integer" value="1" xmi:id="_BU5uCAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_FieldSeparator" prompt="regroupement_nature_contrat_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;" xmi:id="_BU5uCQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_Encoding" prompt="regroupement_nature_contrat_Encoding?" promptNeeded="false" type="id_String" value="ISO-8859-15" xmi:id="_BU5uCgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_RowSeparator" prompt="regroupement_nature_contrat_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;" xmi:id="_BU5uCwKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="test" xmi:id="_BU5uDAKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="regroupement_nature_contrat_File" prompt="regroupement_nature_contrat_File?" promptNeeded="false" type="id_File" value="M:/MX_DSI/DED/DOCUMENTATION/DECISIONNEL/PROJETS/MyData/30_Analyse technique/regroupement_nature_contrat.csv" xmi:id="_BU5uDQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_Header" prompt="regroupement_nature_contrat_Header?" promptNeeded="false" type="id_Integer" value="1" xmi:id="_BU5uDgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_FieldSeparator" prompt="regroupement_nature_contrat_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;" xmi:id="_BU5uDwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_Encoding" prompt="regroupement_nature_contrat_Encoding?" promptNeeded="false" type="id_String" value="ISO-8859-15" xmi:id="_BU5uEAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_nature_contrat_RowSeparator" prompt="regroupement_nature_contrat_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;" xmi:id="_BU5uEQKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7a1f30dd-00c0-46ef-a795-a184e2e7b339"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xmc8LZn6yECS5XUucQ1x01kiGiIeqX/UyOtuWA2RcELzCDWGGhT9Hr7QZMKlHCKj5SEhFdstQIBD
+Dp6w1Io/YA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_550975e1-1674-49aa-ade8-563d758c66f2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KdTnoOxxcPbhot1XgB5Wul1ENbs8gmss8rfzKhe27bV+kxz9qXzjX451RJb+RCT0ieCqifaSE1zh
+RY8EXAL61Q==</DigestValue></Reference></SignedInfo><SignatureValue>zZMtXrWqdEAwSytUHOvg9Lmc67DVyK6lymNrQWPmYYyJybpwqVpjVU203HCkT2os8c/mvetGylHj
+YemYjpW9GJmetTDLg+i3gj+S/gzt/lpM0QnjnjJa/m+ewr3u3SsuK65/CGlz4WWUKwnxWzNULIXH
+7CKsgDOWci1Kz0I/hr/CfLR3ROvXB+Jxba6Q9tjMHHrWeuaiGNjQd8Hgx8sDbXeB3A2mGjNHplDU
+X1zPSGZu8MIJyUy9NztJmZ8/kjUunoUicHD7ppxvR3j2ppCLIXo9Y19Y6HB1kGo2IO9tdDIUs3i6
+EzI/Eqdj96d+kgGQFyjnfm4DD8VDqOOilSCgEg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_550975e1-1674-49aa-ade8-563d758c66f2" Target="#_7a1f30dd-00c0-46ef-a795-a184e2e7b339"><Timestamp>2018-12-18 09:55:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

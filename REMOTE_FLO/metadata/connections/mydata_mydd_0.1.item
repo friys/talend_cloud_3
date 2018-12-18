@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:DatabaseConnection AdditionalParams="context.mydata_mydd_AdditionalParams" ContextId="_onVzkH-OEeitcIuiURg_mg" ContextMode="true" DatabaseType="Redshift" DatasourceName="" DbmsId="redshift_id" DriverClass="com.amazon.redshift.jdbc41.Driver" FileFieldName="" NullChar="" Password="context.mydata_mydd_Password" Port="context.mydata_mydd_Port" ProductId="REDSHIFT" SID="context.mydata_mydd_Database" SQLMode="false" ServerName="context.mydata_mydd_Server" SqlSynthax="" StandardSQL="true" StringQuote="" URL="jdbc:redshift://10.8.64.59:5439/mydata" UiSchema="context.mydata_mydd_Schema" Username="context.mydata_mydd_Login" contextName="test" dataPackage="_pGcKYH-OEeitcIuiURg_mg" id="_cE8qAH-OEeitcIuiURg_mg" label="mydata_mydd" name="mydata_mydd" xmi:id="_o05HYH-OEeitcIuiURg_mg">
+    <taggedValue tag="Is Conn Need Reload" value="false" xmi:id="_o05HYX-OEeitcIuiURg_mg"/>
+    <taggedValue tag="package filter" value="" xmi:id="_o3beAH-OEeitcIuiURg_mg"/>
+    <taggedValue tag="Status" value="" xmi:id="_o3mdIH-OEeitcIuiURg_mg"/>
+    <taggedValue tag="Version" value="0.1" xmi:id="_o3mdIX-OEeitcIuiURg_mg"/>
+    <taggedValue tag="Purpose" value="" xmi:id="_o3mdIn-OEeitcIuiURg_mg"/>
+    <taggedValue tag="Description" value="" xmi:id="_o3mdI3-OEeitcIuiURg_mg"/>
+    <taggedValue tag="Author" value="" xmi:id="_o3mdJH-OEeitcIuiURg_mg"/>
+    <taggedValue tag="otherParameter" xmi:id="_o3mdJX-OEeitcIuiURg_mg"/>
+    <taggedValue tag="DB ProductName" value="Redshift" xmi:id="_o-ehMH-OEeitcIuiURg_mg"/>
+    <taggedValue tag="DB ProductVersion" value="08.00.0002" xmi:id="_o-ehMX-OEeitcIuiURg_mg"/>
+    <taggedValue tag="DB IdentifierQuoteString" value="&quot;" xmi:id="_o-ehMn-OEeitcIuiURg_mg"/>
+    <parameters key="CONN_PARA_KEY_USERNAME" value="context.mydata_mydd_Login" xmi:id="_o05HYn-OEeitcIuiURg_mg"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog dataManager="_o05HYH-OEeitcIuiURg_mg" name="mydata" xmi:id="_pGcKYH-OEeitcIuiURg_mg">
+    <ownedElement name="mydd" xmi:id="_pGcKYX-OEeitcIuiURg_mg" xsi:type="orgomg.cwm.resource.relational:Schema">
+      <ownedElement id="_2Cy2oH-PEeitcIuiURg_mg" label="myd_d_secteur" name="myd_d_secteur" tableType="TABLE" xmi:id="_2Cy2oX-PEeitcIuiURg_mg" xsi:type="relational:TdTable">
+        <feature comment="Identifiant technique du secteur" label="sct_id" length="19" name="sct_id" sourceType="INT8" talendType="id_Long" xmi:id="_2Cy2on-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique du secteur" xmi:id="_2Cy2o3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2pH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="-5" name="INT8" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2pX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Code du secteur" label="sct_cod" length="5" name="sct_cod" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2pn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code du secteur" xmi:id="_2Cy2p3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2qH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2qX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Libelle du secteur" label="sct_lib" length="150" name="sct_lib" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2qn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle du secteur" xmi:id="_2Cy2q3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2rH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2rX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Identifiant technique du regroupement secteur" label="sct_rsc_id" length="10" name="sct_rsc_id" sourceType="INT4" talendType="id_Integer" xmi:id="_2Cy2rn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique du regroupement secteur" xmi:id="_2Cy2r3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2sH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT4" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2sX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Code secteur niveau 4" label="sct_niv4" length="5" name="sct_niv4" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2sn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code secteur niveau 4" xmi:id="_2Cy2s3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2tH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2tX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Libelle secteur niveau 4" label="sct_lib4" length="150" name="sct_lib4" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2tn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle secteur niveau 4" xmi:id="_2Cy2t3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2uH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2uX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Code secteur niveau 3" label="sct_niv3" length="5" name="sct_niv3" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2un-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code secteur niveau 3" xmi:id="_2Cy2u3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2vH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2vX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Libelle secteur niveau 3" label="sct_lib3" length="150" name="sct_lib3" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2vn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle secteur niveau 3" xmi:id="_2Cy2v3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2wH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2wX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Code secteur niveau 2" label="sct_niv2" length="5" name="sct_niv2" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2wn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code secteur niveau 2" xmi:id="_2Cy2w3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2xH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2xX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Libelle secteur niveau 2" label="sct_lib2" length="150" name="sct_lib2" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2xn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle secteur niveau 2" xmi:id="_2Cy2x3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2yH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2yX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Code secteur niveau 1" label="sct_niv1" length="5" name="sct_niv1" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2yn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code secteur niveau 1" xmi:id="_2Cy2y3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy2zH-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy2zX-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Libelle secteur niveau 1" label="sct_lib1" length="150" name="sct_lib1" sourceType="VARCHAR" talendType="id_String" xmi:id="_2Cy2zn-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle secteur niveau 1" xmi:id="_2Cy2z3-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy20H-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_2Cy20X-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Date technique de creation de ligne" label="sct_dat_create" length="29" name="sct_dat_create" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_2Cy20n-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de creation de ligne" xmi:id="_2Cy203-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy21H-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_2Cy21X-PEeitcIuiURg_mg"/>
+        </feature>
+        <feature comment="Date technique de modification de ligne" label="sct_dat_update" length="29" name="sct_dat_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_2Cy21n-PEeitcIuiURg_mg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de modification de ligne" xmi:id="_2Cy213-PEeitcIuiURg_mg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_2Cy22H-PEeitcIuiURg_mg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_2Cy22X-PEeitcIuiURg_mg"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_8g1FgH-ZEeiVa87unX5t-w" label="myd_d_reg_secteur" name="myd_d_reg_secteur" tableType="TABLE" xmi:id="_8g5-AH-ZEeiVa87unX5t-w" xsi:type="relational:TdTable">
+        <feature comment="Identifiant technique du regroupement secteur" label="rsc_id" length="10" name="rsc_id" sourceType="INT4" talendType="id_Integer" xmi:id="_8g5-AX-ZEeiVa87unX5t-w" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique du regroupement secteur" xmi:id="_8g5-An-ZEeiVa87unX5t-w"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_8g5-A3-ZEeiVa87unX5t-w" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT4" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_8g5-BH-ZEeiVa87unX5t-w"/>
+        </feature>
+        <feature comment="Code secteur" label="rsc_cod" length="3" name="rsc_cod" sourceType="VARCHAR" talendType="id_String" xmi:id="_8g5-BX-ZEeiVa87unX5t-w" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code secteur" xmi:id="_8g5-Bn-ZEeiVa87unX5t-w"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_8g5-B3-ZEeiVa87unX5t-w" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_8g5-CH-ZEeiVa87unX5t-w"/>
+        </feature>
+        <feature comment="Libelle secteur" label="rsc_lib" length="50" name="rsc_lib" sourceType="VARCHAR" talendType="id_String" xmi:id="_8g5-CX-ZEeiVa87unX5t-w" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle secteur" xmi:id="_8g5-Cn-ZEeiVa87unX5t-w"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_8g5-C3-ZEeiVa87unX5t-w" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_8g5-DH-ZEeiVa87unX5t-w"/>
+        </feature>
+        <feature comment="Date technique de creation de ligne" label="rsc_dat_create" length="29" name="rsc_dat_create" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_8g5-DX-ZEeiVa87unX5t-w" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de creation de ligne" xmi:id="_8g5-Dn-ZEeiVa87unX5t-w"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_8g5-D3-ZEeiVa87unX5t-w" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_8g5-EH-ZEeiVa87unX5t-w"/>
+        </feature>
+        <feature comment="Date technique de modification de ligne" label="rsc_dat_update" length="29" name="rsc_dat_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_8g5-EX-ZEeiVa87unX5t-w" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de modification de ligne" xmi:id="_8g5-En-ZEeiVa87unX5t-w"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_8g5-E3-ZEeiVa87unX5t-w" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_8g5-FH-ZEeiVa87unX5t-w"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_AVDN0IE2Eeiu2seMVAh4aw" label="myd_d_region" name="myd_d_region" tableType="TABLE" xmi:id="_AVMXwIE2Eeiu2seMVAh4aw" xsi:type="relational:TdTable">
+        <feature label="reg_id" length="10" name="reg_id" sourceType="INT4" talendType="id_Integer" xmi:id="_AVMXwYE2Eeiu2seMVAh4aw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_AVMXwoE2Eeiu2seMVAh4aw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_AVMXw4E2Eeiu2seMVAh4aw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT4" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_AVMXxIE2Eeiu2seMVAh4aw"/>
+        </feature>
+        <feature label="reg_cod" length="3" name="reg_cod" sourceType="VARCHAR" talendType="id_String" xmi:id="_AVMXxYE2Eeiu2seMVAh4aw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_AVMXxoE2Eeiu2seMVAh4aw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_AVMXx4E2Eeiu2seMVAh4aw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_AVMXyIE2Eeiu2seMVAh4aw"/>
+        </feature>
+        <feature label="reg_lib" length="50" name="reg_lib" sourceType="VARCHAR" talendType="id_String" xmi:id="_AVMXyYE2Eeiu2seMVAh4aw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_AVMXyoE2Eeiu2seMVAh4aw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_AVMXy4E2Eeiu2seMVAh4aw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_AVMXzIE2Eeiu2seMVAh4aw"/>
+        </feature>
+        <feature label="reg_dat_create" length="29" name="reg_dat_create" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_AVMXzYE2Eeiu2seMVAh4aw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_AVMXzoE2Eeiu2seMVAh4aw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_AVMXz4E2Eeiu2seMVAh4aw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_AVMX0IE2Eeiu2seMVAh4aw"/>
+        </feature>
+        <feature label="reg_dat_update" length="29" name="reg_dat_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_AVMX0YE2Eeiu2seMVAh4aw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_AVMX0oE2Eeiu2seMVAh4aw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_AVMX04E2Eeiu2seMVAh4aw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_AVMX1IE2Eeiu2seMVAh4aw"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_PGOCMIROEeiz_eGEZItseA" label="myd_d_departement" name="myd_d_departement" tableType="TABLE" xmi:id="_PGUv4IROEeiz_eGEZItseA" xsi:type="relational:TdTable">
+        <feature comment="Identifiant technique du departement" label="dpt_id" length="19" name="dpt_id" sourceType="INT8" talendType="id_Long" xmi:id="_PGUv4YROEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique du departement" xmi:id="_PGUv4oROEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_PGUv44ROEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="-5" name="INT8" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_PGUv5IROEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Code du departement" label="dpt_cod" length="3" name="dpt_cod" sourceType="VARCHAR" talendType="id_String" xmi:id="_PGUv5YROEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code du departement" xmi:id="_PGUv5oROEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_PGUv54ROEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_PGUv6IROEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Libelle du departement" label="dpt_lib" length="30" name="dpt_lib" sourceType="VARCHAR" talendType="id_String" xmi:id="_PGUv6YROEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle du departement" xmi:id="_PGUv6oROEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_PGUv64ROEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_PGUv7IROEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Identifiant technique de la region" label="dpt_reg_id" length="10" name="dpt_reg_id" sourceType="INT4" talendType="id_Integer" xmi:id="_PGUv7YROEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique de la region" xmi:id="_PGUv7oROEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_PGUv74ROEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT4" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_PGUv8IROEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Date technique de creation de ligne" label="dpt_dat_create" length="29" name="dpt_dat_create" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_PGUv8YROEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de creation de ligne" xmi:id="_PGUv8oROEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_PGUv84ROEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_PGUv9IROEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Date technique de modification de ligne" label="dpt_dat_update" length="29" name="dpt_dat_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_PGUv9YROEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de modification de ligne" xmi:id="_PGUv9oROEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_PGUv94ROEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_PGUv-IROEeiz_eGEZItseA"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_-JDK4IRXEeiz_eGEZItseA" label="myd_d_reg_stu_sal" name="myd_d_reg_stu_sal" tableType="TABLE" xmi:id="_-JDx8IRXEeiz_eGEZItseA" xsi:type="relational:TdTable">
+        <feature comment="Identifiant technique du regroupement statut salarie" label="rss_id" length="19" name="rss_id" sourceType="INT8" talendType="id_Long" xmi:id="_-JDx8YRXEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique du regroupement statut salarie" xmi:id="_-JDx8oRXEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_-JDx84RXEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="-5" name="INT8" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_-JDx9IRXEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Code du statut salarie" label="rss_cod" length="1" name="rss_cod" sourceType="CHARACTER" talendType="id_String" xmi:id="_-JDx9YRXEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code du statut salarie" xmi:id="_-JDx9oRXEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_-JDx94RXEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHARACTER" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_-JDx-IRXEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Libelle du statut salarie" label="rss_lib" length="10" name="rss_lib" sourceType="VARCHAR" talendType="id_String" xmi:id="_-JDx-YRXEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle du statut salarie" xmi:id="_-JDx-oRXEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_-JDx-4RXEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_-JDx_IRXEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Date technique de creation de ligne" label="rss_dat_create" length="29" name="rss_dat_create" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_-JDx_YRXEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de creation de ligne" xmi:id="_-JDx_oRXEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_-JDx_4RXEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_-JDyAIRXEeiz_eGEZItseA"/>
+        </feature>
+        <feature comment="Date technique de modification de ligne" label="rss_dat_update" length="29" name="rss_dat_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_-JDyAYRXEeiz_eGEZItseA" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de modification de ligne" xmi:id="_-JDyAoRXEeiz_eGEZItseA"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_-JDyA4RXEeiz_eGEZItseA" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_-JDyBIRXEeiz_eGEZItseA"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_wAyUwIXNEeiOK4X_xJFAHQ" label="myd_d_statut_salarie" name="myd_d_statut_salarie" tableType="TABLE" xmi:id="_wA1YEIXNEeiOK4X_xJFAHQ" xsi:type="relational:TdTable">
+        <feature label="ssa_id" length="19" name="ssa_id" sourceType="INT8" talendType="id_Long" xmi:id="_wA1YEYXNEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_wA1YEoXNEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wA1YE4XNEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="-5" name="INT8" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wA1YFIXNEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature label="ssa_cod" length="3" name="ssa_cod" sourceType="VARCHAR" talendType="id_String" xmi:id="_wA1YFYXNEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_wA1YFoXNEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wA1YF4XNEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wA1YGIXNEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature label="ssa_lib" length="100" name="ssa_lib" sourceType="VARCHAR" talendType="id_String" xmi:id="_wA1YGYXNEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_wA1YGoXNEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wA1YG4XNEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wA1YHIXNEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature label="ssa_rss_id" length="19" name="ssa_rss_id" sourceType="INT8" talendType="id_Long" xmi:id="_wA1YHYXNEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_wA1YHoXNEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wA1YH4XNEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="-5" name="INT8" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wA1YIIXNEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature label="ssa_dat_create" length="29" name="ssa_dat_create" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_wA1YIYXNEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_wA1YIoXNEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wA1YI4XNEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_wA1YJIXNEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature label="ssa_dat_update" length="29" name="ssa_dat_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_wA1YJYXNEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_wA1YJoXNEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wA1YJ4XNEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_wA1_IIXNEeiOK4X_xJFAHQ"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_lIABwIXXEeiOK4X_xJFAHQ" label="myd_d_reg_nat_contrat" name="myd_d_reg_nat_contrat" tableType="TABLE" xmi:id="_lIABwYXXEeiOK4X_xJFAHQ" xsi:type="relational:TdTable">
+        <feature comment="Identifiant technique du regroupemement de la nature de contrat" label="rnc_id" length="10" name="rnc_id" sourceType="INT4" talendType="id_Integer" xmi:id="_lIABwoXXEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique du regroupemement de la nature de contrat" xmi:id="_lIABw4XXEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_lIABxIXXEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT4" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_lIABxYXXEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Code nature de contrat" label="rnc_cod" length="3" name="rnc_cod" sourceType="VARCHAR" talendType="id_String" xmi:id="_lIABxoXXEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code nature de contrat" xmi:id="_lIABx4XXEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_lIAByIXXEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_lIAByYXXEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Libelle de la nature de contrat" label="rnc_lib" length="10" name="rnc_lib" sourceType="VARCHAR" talendType="id_String" xmi:id="_lIAByoXXEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle de la nature de contrat" xmi:id="_lIABy4XXEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_lIABzIXXEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_lIABzYXXEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Date technique de creation de ligne" label="rnc_dat_create" length="29" name="rnc_dat_create" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_lIABzoXXEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de creation de ligne" xmi:id="_lIABz4XXEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_lIAB0IXXEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_lIAB0YXXEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Date technique de modification de ligne" label="rnc_dat_update" length="29" name="rnc_dat_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_lIAB0oXXEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de modification de ligne" xmi:id="_lIAB04XXEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_lIAB1IXXEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_lIAB1YXXEeiOK4X_xJFAHQ"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_m1daYIXdEeiOK4X_xJFAHQ" label="myd_d_nat_contrat" name="myd_d_nat_contrat" tableType="TABLE" xmi:id="_m1daYYXdEeiOK4X_xJFAHQ" xsi:type="relational:TdTable">
+        <feature comment="Identifiant technique de la nature de contrat" label="ncn_id" length="19" name="ncn_id" sourceType="INT8" talendType="id_Long" xmi:id="_m1daYoXdEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique de la nature de contrat" xmi:id="_m1daY4XdEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_m1daZIXdEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="-5" name="INT8" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_m1daZYXdEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Code de la nature de contrat" label="ncn_cod" length="3" name="ncn_cod" sourceType="VARCHAR" talendType="id_String" xmi:id="_m1daZoXdEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Code de la nature de contrat" xmi:id="_m1daZ4XdEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_m1daaIXdEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_m1daaYXdEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Libelle de la nature de contrat" label="ncn_lib" length="100" name="ncn_lib" sourceType="VARCHAR" talendType="id_String" xmi:id="_m1daaoXdEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Libelle de la nature de contrat" xmi:id="_m1daa4XdEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_m1dabIXdEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_m1dabYXdEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Identifiant technique du regroupemement de la nature de contrat" label="ncn_rnc_id" length="10" name="ncn_rnc_id" sourceType="INT4" talendType="id_Integer" xmi:id="_m1daboXdEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Identifiant technique du regroupemement de la nature de contrat" xmi:id="_m1dab4XdEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_m1dacIXdEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT4" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_m1dacYXdEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Date technique de creation de ligne" label="ncn_dat_create" length="29" name="ncn_dat_create" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_m1dacoXdEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de creation de ligne" xmi:id="_m1dac4XdEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_m1dadIXdEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_m1dadYXdEeiOK4X_xJFAHQ"/>
+        </feature>
+        <feature comment="Date technique de modification de ligne" label="ncn_dat_update" length="29" name="ncn_dat_update" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_m1dadoXdEeiOK4X_xJFAHQ" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Date technique de modification de ligne" xmi:id="_m1dad4XdEeiOK4X_xJFAHQ"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_m1daeIXdEeiOK4X_xJFAHQ" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecision="6" numericPrecisionRadix="10" xmi:id="_m1daeYXdEeiOK4X_xJFAHQ"/>
+        </feature>
+      </ownedElement>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7c2f05c6-b618-48d3-a352-9702bd7c3424"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bfqWLL/Sc12EyLtGv9ve6OO50SNeCnGfKHQ+SEu9qBe/yOLA6f+PzqIDnoRQ4qdWW2Zmg9F80X2Y
+DgjwVU6M9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fae6ad51-436a-47d3-9084-39c9ac1e0c36"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6DWpeNOYl8zamESD2YgiVj5SITx5hk3P/jxI6XxAiXsl8CmEZOo1dEHWXbO3X6zuQeiyjha+kzZJ
+rD6yarWJhg==</DigestValue></Reference></SignedInfo><SignatureValue>oTTi4NP+hpq1Fx8nlKddPHchQYP1DFRVn2+TmDz5EDFpLPHQ8DESI+UMwYqNzPepJanLHP/wpftU
+eySwxE1lO91JYHiu9v2A3NwajFGfCCxGCMJ+8vFRU9TzSlEADynsrwD/d4D1kLy3rc6iPue8/i+5
+ox0BJXHIa7GahUEs352yxQbSUdExT8ZnNLQDwfV49fAoCf4p83FzoTyOHMUVSCw3eH6SvRir8F8z
+Yo1A/Ite1DBLpPrhRLPb8K+sooTPjFg+4a9vM0RsTgeChWx9wABNrgr2ix9iq1+yqwkyJTP42FTb
+HCoW/2heAtXui7bf5ptzFfMPPyW+jEhiPJ6A6g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fae6ad51-436a-47d3-9084-39c9ac1e0c36" Target="#_7c2f05c6-b618-48d3-a352-9702bd7c3424"><Timestamp>2018-12-18 09:55:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:version="2.0">
+  <talendfile:ContextType confirmationNeeded="false" name="test" xmi:id="_BTVnwAKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="fichier_envoi" prompt="fichier_envoi?" promptNeeded="false" type="id_String" value="C:\talend\redshift\envoi.csv" xmi:id="_BTVnwQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_entreprise" prompt="fichier_entreprise?" promptNeeded="false" type="id_String" value="C:\talend\redshift\entreprise.csv" xmi:id="_BTVnwgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_etablissement" prompt="fichier_etablissement?" promptNeeded="false" type="id_String" value="C:\talend\redshift\etablissement.csv" xmi:id="_BTVnwwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_declaration" prompt="fichier_declaration?" promptNeeded="false" type="id_String" value="C:\talend\redshift\declaration.csv" xmi:id="_BTVnxAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_contrat" prompt="fichier_contrat?" promptNeeded="false" type="id_String" value="C:\talend\redshift\contrat.csv" xmi:id="_BTVnxQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_talend" prompt="repertoire_talend?" promptNeeded="false" type="id_String" value="C:\talend" xmi:id="_BTVnxgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_tri" prompt="repertoire_tri?" promptNeeded="false" type="id_String" value="\tri_s3" xmi:id="_BTVnxwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_tri_dsn_mensuelle" prompt="repertoire_tri_dsn_mensuelle?" promptNeeded="false" type="id_String" value="\dsn_mensuelle" xmi:id="_BTVnyAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_renomme" prompt="repertoire_renomme?" promptNeeded="false" type="id_String" value="\renomme" xmi:id="_BTVnyQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_anonymise" prompt="repertoire_anonymise?" promptNeeded="false" type="id_String" value="\anonymise" xmi:id="_BTVnygKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="log_redshift" prompt="log_redshift?" promptNeeded="false" type="id_String" value="C:/Users/frichard/workspace_remote/redshift-jdbc.log" xmi:id="_BTVnywKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_traitement" prompt="repertoire_traitement?" promptNeeded="false" type="id_String" value="C:\talend\traitement" xmi:id="_BTVnzAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="id_suivi" prompt="id_suivi?" promptNeeded="false" type="id_Long" value="" xmi:id="_BTVnzQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nom_fichier_datalake" prompt="nom_fichier_datalake?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVnzgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_individu" prompt="iteration_individu?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTVnzwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nir_individu" prompt="nir_individu?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn0AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_copie_from_sftp_zip" prompt="repertoire_copie_from_sftp_zip?" promptNeeded="false" type="id_String" value="\copie_from_sftp_zip" xmi:id="_BTVn0QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_fichiers_parametre" prompt="repertoire_fichiers_parametre?" promptNeeded="false" type="id_String" value="C:/talend/files_parametre" xmi:id="_BTVn0gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nom_fichier_dsn_zip" prompt="nom_fichier_dsn_zip?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn0wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champahash" prompt="champahash?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn1AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_nir_ntt" prompt="champ_nir_ntt?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn1QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_date_naissance" prompt="champ_date_naissance?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn1gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_a_supprime" prompt="champ_a_supprime?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn1wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="date_mois_declaration" prompt="date_mois_declaration?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn2AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_contrat" prompt="iteration_contrat?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTVn2QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_absence" prompt="iteration_absence?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTVn2gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="num_contrat" prompt="num_contrat?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn2wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="id_individu" prompt="id_individu?" promptNeeded="false" type="id_Long" value="" xmi:id="_BTVn3AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_absence" prompt="fichier_absence?" promptNeeded="false" type="id_String" value="C:\talend\redshift\absence.csv" xmi:id="_BTVn3QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_rejet" prompt="repertoire_rejet?" promptNeeded="false" type="id_String" value="\rejets" xmi:id="_BTVn3gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f02" prompt="fichier_suivi_traitement_f02?" promptNeeded="false" type="id_String" value="C:\talend\redshift\suivi_traitement_f02.csv" xmi:id="_BTVn3wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f03" prompt="fichier_suivi_traitement_f03?" promptNeeded="false" type="id_String" value="C:\talend\redshift\suivi_traitement_f03.csv" xmi:id="_BTVn4AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f04" prompt="fichier_suivi_traitement_f04?" promptNeeded="false" type="id_String" value="C:\talend\redshift\suivi_traitement_f04.csv" xmi:id="_BTVn4QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_temporaire_f04" prompt="fichier_suivi_temporaire_f04?" promptNeeded="false" type="id_String" value="C:\talend\redshift\suivi_temporaire_f04.csv" xmi:id="_BTVn4gKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="developpement" xmi:id="_BTVn4wKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="fichier_envoi" prompt="fichier_envoi?" promptNeeded="false" type="id_String" value="/talend/redshift/envoi.csv" xmi:id="_BTVn5AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_entreprise" prompt="fichier_entreprise?" promptNeeded="false" type="id_String" value="/talend/redshift/entreprise.csv" xmi:id="_BTVn5QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_etablissement" prompt="fichier_etablissement?" promptNeeded="false" type="id_String" value="/talend/redshift/etablissement.csv" xmi:id="_BTVn5gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_declaration" prompt="fichier_declaration?" promptNeeded="false" type="id_String" value="/talend/redshift/declaration.csv" xmi:id="_BTVn5wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_contrat" prompt="fichier_contrat?" promptNeeded="false" type="id_String" value="/talend/redshift/contrat.csv" xmi:id="_BTVn6AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_talend" prompt="repertoire_talend?" promptNeeded="false" type="id_String" value="/talend" xmi:id="_BTVn6QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_tri" prompt="repertoire_tri?" promptNeeded="false" type="id_String" value="/tri_s3" xmi:id="_BTVn6gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_tri_dsn_mensuelle" prompt="repertoire_tri_dsn_mensuelle?" promptNeeded="false" type="id_String" value="/dsn_mensuelle" xmi:id="_BTVn6wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_renomme" prompt="repertoire_renomme?" promptNeeded="false" type="id_String" value="/renomme" xmi:id="_BTVn7AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_anonymise" prompt="repertoire_anonymise?" promptNeeded="false" type="id_String" value="/anonymise" xmi:id="_BTVn7QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="log_redshift" prompt="log_redshift?" promptNeeded="false" type="id_String" value="/talend/redshift/logs/redshift-jdbc.log" xmi:id="_BTVn7gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_traitement" prompt="repertoire_traitement?" promptNeeded="false" type="id_String" value="/talend/traitement" xmi:id="_BTVn7wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="id_suivi" prompt="id_suivi?" promptNeeded="false" type="id_Long" value="" xmi:id="_BTVn8AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nom_fichier_datalake" prompt="nom_fichier_datalake?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn8QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_individu" prompt="iteration_individu?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTVn8gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nir_individu" prompt="nir_individu?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn8wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_copie_from_sftp_zip" prompt="repertoire_copie_from_sftp_zip?" promptNeeded="false" type="id_String" value="/copie_from_sftp_zip" xmi:id="_BTVn9AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_fichiers_parametre" prompt="repertoire_fichiers_parametre?" promptNeeded="false" type="id_String" value="/talend/fichiers_parametres" xmi:id="_BTVn9QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nom_fichier_dsn_zip" prompt="nom_fichier_dsn_zip?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn9gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champahash" prompt="champahash?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn9wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_nir_ntt" prompt="champ_nir_ntt?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn-AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_date_naissance" prompt="champ_date_naissance?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn-QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_a_supprime" prompt="champ_a_supprime?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn-gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="date_mois_declaration" prompt="date_mois_declaration?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn-wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_contrat" prompt="iteration_contrat?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTVn_AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_absence" prompt="iteration_absence?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTVn_QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="num_contrat" prompt="num_contrat?" promptNeeded="false" type="id_String" value="" xmi:id="_BTVn_gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="id_individu" prompt="id_individu?" promptNeeded="false" type="id_Long" value="" xmi:id="_BTVn_wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_absence" prompt="fichier_absence?" promptNeeded="false" type="id_String" value="/talend/redshift/absence.csv" xmi:id="_BTVoAAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_rejet" prompt="repertoire_rejet?" promptNeeded="false" type="id_String" value="/rejets" xmi:id="_BTVoAQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f02" prompt="fichier_suivi_traitement_f02?" promptNeeded="false" type="id_String" value="/talend/redshift/suivi_traitement_f02.csv" xmi:id="_BTVoAgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f03" prompt="fichier_suivi_traitement_f03?" promptNeeded="false" type="id_String" value="/talend/redshift/suivi_traitement_f03.csv" xmi:id="_BTVoAwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f04" prompt="fichier_suivi_traitement_f04?" promptNeeded="false" type="id_String" value="/talend/redshift/suivi_traitement_f04.csv" xmi:id="_BTVoBAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_temporaire_f04" prompt="fichier_suivi_temporaire_f04?" promptNeeded="false" type="id_String" value="/talend/redshift/suivi_temporaire_f04.csv" xmi:id="_BTVoBQKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="production" xmi:id="_BTWO0AKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="fichier_envoi" prompt="fichier_envoi?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO0QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_entreprise" prompt="fichier_entreprise?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO0gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_etablissement" prompt="fichier_etablissement?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO0wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_declaration" prompt="fichier_declaration?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO1AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_contrat" prompt="fichier_contrat?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO1QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_talend" prompt="repertoire_talend?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO1gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_tri" prompt="repertoire_tri?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO1wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_tri_dsn_mensuelle" prompt="repertoire_tri_dsn_mensuelle?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO2AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_renomme" prompt="repertoire_renomme?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO2QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_anonymise" prompt="repertoire_anonymise?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO2gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="log_redshift" prompt="log_redshift?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO2wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_traitement" prompt="repertoire_traitement?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO3AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="id_suivi" prompt="id_suivi?" promptNeeded="false" type="id_Long" value="" xmi:id="_BTWO3QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nom_fichier_datalake" prompt="nom_fichier_datalake?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO3gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_individu" prompt="iteration_individu?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTWO3wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nir_individu" prompt="nir_individu?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO4AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_copie_from_sftp_zip" prompt="repertoire_copie_from_sftp_zip?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO4QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_fichiers_parametre" prompt="repertoire_fichiers_parametre?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO4gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="nom_fichier_dsn_zip" prompt="nom_fichier_dsn_zip?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO4wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champahash" prompt="champahash?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO5AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_nir_ntt" prompt="champ_nir_ntt?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO5QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_date_naissance" prompt="champ_date_naissance?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO5gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="champ_a_supprime" prompt="champ_a_supprime?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO5wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="date_mois_declaration" prompt="date_mois_declaration?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO6AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_contrat" prompt="iteration_contrat?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTWO6QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="iteration_absence" prompt="iteration_absence?" promptNeeded="false" type="id_Integer" value="" xmi:id="_BTWO6gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="num_contrat" prompt="num_contrat?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO6wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="id_individu" prompt="id_individu?" promptNeeded="false" type="id_Long" value="" xmi:id="_BTWO7AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_absence" prompt="fichier_absence?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO7QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="repertoire_rejet" prompt="repertoire_rejet?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO7gKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f02" prompt="fichier_suivi_traitement_f02?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO7wKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f03" prompt="fichier_suivi_traitement_f03?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO8AKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_traitement_f04" prompt="fichier_suivi_traitement_f04?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO8QKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="fichier_suivi_temporaire_f04" prompt="fichier_suivi_temporaire_f04?" promptNeeded="false" type="id_String" value="" xmi:id="_BTWO8gKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1eb1879a-d69f-4fab-9ff3-a7cdae6a334e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eZd66GIaMy4MTPIRikM61p7DoE6+f0CW1QumJkHbiv9V+2UC3O2mpB7OHw9ne/2ARAtbOFoM+T76
+t4c32/I8Jw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e51919fe-6394-4746-804e-b200f45a4cda"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xMJnS+jrtlXgBmeQ5Bi/3sHJ5SxXnspYbddnUVqKj2oSBd+8LjZDvV6Q+qZi4fNas64AcuYqQk72
+Wj/xn19yNg==</DigestValue></Reference></SignedInfo><SignatureValue>0pC8INHioIp0gOj3FecRlu6mZETOUkZtLZA87FesXYN34c1fqHewOVWa4cfFUVlLdoyaAfb1bPz1
+ezzQFlbO0mvYv/2xy0c9A1ctNWy2IfkkjG5BrGNTBep0ecNnt9w1lFmU0gRRTQRtfaBCuY/0F3Ep
+0xQbpWGNq6TtbfEostVUOUg4mDvsFvw2YPUcN9xXpuDCILhHRM8hWHNpF0mhzrXPC72xFIS7a+WS
+xr0Yulv7degflRwgT13frQZob+MIq3HnrlpN6cZdUHk5b7ECf6BD2kypZWJ5lc8DsBjiTqVKvFTE
++bdBvd20lk708sbDovFXdrDEeNxO1Jm2aH199g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e51919fe-6394-4746-804e-b200f45a4cda" Target="#_1eb1879a-d69f-4fab-9ff3-a7cdae6a334e"><Timestamp>2018-12-18 09:55:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

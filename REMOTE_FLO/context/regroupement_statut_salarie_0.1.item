@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:version="2.0">
+  <talendfile:ContextType confirmationNeeded="false" name="developpement" xmi:id="_BWlJAAKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="regroupement_statut_salarie_Header" prompt="regroupement_statut_salarie_Header?" promptNeeded="false" type="id_Integer" value="1" xmi:id="_BWlJAQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_File" prompt="regroupement_statut_salarie_File?" promptNeeded="false" type="id_File" value="/talend/fichiers_parametres/regroupement_statut_salarie.csv" xmi:id="_BWlJAgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_FieldSeparator" prompt="regroupement_statut_salarie_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;" xmi:id="_BWlJAwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_RowSeparator" prompt="regroupement_statut_salarie_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;" xmi:id="_BWlJBAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_Encoding" prompt="regroupement_statut_salarie_Encoding?" promptNeeded="false" type="id_String" value="US-ASCII" xmi:id="_BWlJBQKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="production" xmi:id="_BWlJBgKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="regroupement_statut_salarie_Header" prompt="regroupement_statut_salarie_Header?" promptNeeded="false" type="id_Integer" value="1" xmi:id="_BWlJBwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_File" prompt="regroupement_statut_salarie_File?" promptNeeded="false" type="id_File" value="M:/MX_DSI/DED/DOCUMENTATION/DECISIONNEL/PROJETS/MyData/30_Analyse technique/regroupement_statut_salarie.csv" xmi:id="_BWlJCAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_FieldSeparator" prompt="regroupement_statut_salarie_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;" xmi:id="_BWlJCQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_RowSeparator" prompt="regroupement_statut_salarie_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;" xmi:id="_BWlJCgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_Encoding" prompt="regroupement_statut_salarie_Encoding?" promptNeeded="false" type="id_String" value="US-ASCII" xmi:id="_BWlJCwKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="test" xmi:id="_BWlJDAKrEemEUNrMaa3PgA">
+    <contextParameter comment="" name="regroupement_statut_salarie_Header" prompt="regroupement_statut_salarie_Header?" promptNeeded="false" type="id_Integer" value="1" xmi:id="_BWlJDQKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_File" prompt="regroupement_statut_salarie_File?" promptNeeded="false" type="id_File" value="M:/MX_DSI/DED/DOCUMENTATION/DECISIONNEL/PROJETS/MyData/30_Analyse technique/regroupement_statut_salarie.csv" xmi:id="_BWlJDgKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_FieldSeparator" prompt="regroupement_statut_salarie_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;" xmi:id="_BWlJDwKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_RowSeparator" prompt="regroupement_statut_salarie_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;" xmi:id="_BWlJEAKrEemEUNrMaa3PgA"/>
+    <contextParameter comment="" name="regroupement_statut_salarie_Encoding" prompt="regroupement_statut_salarie_Encoding?" promptNeeded="false" type="id_String" value="US-ASCII" xmi:id="_BWlJEQKrEemEUNrMaa3PgA"/>
+  </talendfile:ContextType>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9fba7c4a-4b49-4d08-9070-b186933708e6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jyV8tllM0pJG4DLyRx+BvUhRgjuii7EkC5lacCK4uoN1rZFLWfZBP8f/hgo6Sfa4SQA9nR1HGKNE
+FAJdjJs8hQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9f1930a5-b8f7-4807-a5c7-daa07028280b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UyttOf6fSNMVd7N/QywVIDIhX30ve/hAmbFeATyP4PfWwbspLH0FA3oI8EptJ/m3MJOpfArLc2dC
+G4Wsor84Bw==</DigestValue></Reference></SignedInfo><SignatureValue>thu5YvBptvGhnsWkYz8lSwfFG802p+slPWR03phMSsac6LOhCRFaVP/DUB1j03/Q1p+EY+JjIkzJ
+YSklOz0FzI67OSIfd3ApF+0UA4n5mc259SUVcLsS+pcCbmq44yvhvWHKWseb/YsRwZpJFWUgmD17
+thxcR2+CZCpmJSeiyUFLx9/0nvQYHizQQC6lf3eWpIKNnVRNaVxDzjikSomLpIHz359XV7ERN3J2
+aIcNsxjJsQ8ppK9s7Baw0dkCf56qkZHQktVieNHd9Y/X7RyvkfRv9fv/06X1dOineSkd8jiv3KKS
+5RgcYcj3kuewSCKTO82M8/QQZbDjeMiT6yGhbQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9f1930a5-b8f7-4807-a5c7-daa07028280b" Target="#_9fba7c4a-4b49-4d08-9070-b186933708e6"><Timestamp>2018-12-18 09:55:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
