@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -109,13 +111,132 @@
     <routinesParameter id="_AdMbMOy4EeiKnJatvEeiPQ" name="TalendStringUtil"/>
     <routinesParameter id="_AdDRQOy4EeiKnJatvEeiPQ" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8a341032-5d69-45c3-84c4-02c096c654e4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AlMfSpxKIrX3S993MCOZ3Bew/t4eTudsWI1zIGZ0tvTmpJ07S7PsjypkIeSAuJb+u5CCkiN4dqPm
-jDSmwCT9fw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8b48b81b-343f-4ab3-ac56-b9204abdcaf9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>brEzY4HaeRYUQtGXHlauy3lw91rStainGuc6Rqq8Xw9B9TQYYGkVOeYEqIcWFxr62hYrZwhfH4Ne
-RxcEhc5R3Q==</DigestValue></Reference></SignedInfo><SignatureValue>jOcUSlcTYx+CqXc8OmrcITbxDAGkQMhzm17Fy2oICcpAs9h1DMg+PxQn2pzO4CYgxb4ep2kD0OsD
-n4RYG0o2Y+5SRFPd5/HMjYGn2UKpB1JrG4j0aiSPjtSoty64TCgowecePEqoPQ02fvOFxAcLevUt
-E8/kFVVEvGIK9q5K6w1ONF/ryMxUJcwlw0cAzRugsIh97Jqw9BYwutKba593Y6tlpxvU2RBVdRfG
-Yck2SMzToW9UHbM8c9O/lqaz6sRmsG/ScdofLd6NSLE4rkaZ3wooY+HVANev8f2zLEZqvYxsNPym
-MlWPQagfMCZX0YNYK1jqOzlGWs+OBOvqn3+w0w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="clef"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="valeur"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
+    <elementParameter field="TABLE" name="INTABLE">
+      <elementValue elementRef="code" value="&quot;10&quot;"/>
+      <elementValue elementRef="clef" value="&quot;ID&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;AAA&quot;"/>
+      <elementValue elementRef="code" value="&quot;10&quot;"/>
+      <elementValue elementRef="clef" value="&quot;prenom&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;Etienne&quot;"/>
+      <elementValue elementRef="code" value="&quot;10&quot;"/>
+      <elementValue elementRef="clef" value="&quot;nom&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;Menuet&quot;"/>
+      <elementValue elementRef="code" value="&quot;20&quot;"/>
+      <elementValue elementRef="clef" value="&quot;ID&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;10&quot;"/>
+      <elementValue elementRef="code" value="&quot;20&quot;"/>
+      <elementValue elementRef="clef" value="&quot;valeur&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;1000&quot;"/>
+      <elementValue elementRef="code" value="&quot;20&quot;"/>
+      <elementValue elementRef="clef" value="&quot;type&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;TOP&quot;"/>
+      <elementValue elementRef="code" value="&quot;30&quot;"/>
+      <elementValue elementRef="clef" value="&quot;ID&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;1&quot;"/>
+      <elementValue elementRef="code" value="&quot;30&quot;"/>
+      <elementValue elementRef="clef" value="&quot;datedebut&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;lindi&quot;"/>
+      <elementValue elementRef="code" value="&quot;30&quot;"/>
+      <elementValue elementRef="clef" value="&quot;datefin&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;mardi&quot;"/>
+      <elementValue elementRef="code" value="&quot;20&quot;"/>
+      <elementValue elementRef="clef" value="&quot;ID&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;20&quot;"/>
+      <elementValue elementRef="code" value="&quot;20&quot;"/>
+      <elementValue elementRef="clef" value="&quot;valeur&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;500&quot;"/>
+      <elementValue elementRef="code" value="&quot;20&quot;"/>
+      <elementValue elementRef="clef" value="&quot;type&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;TOP&quot;"/>
+      <elementValue elementRef="code" value="&quot;30&quot;"/>
+      <elementValue elementRef="clef" value="&quot;ID&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;2&quot;"/>
+      <elementValue elementRef="code" value="&quot;30&quot;"/>
+      <elementValue elementRef="clef" value="&quot;datedebut&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;jeudi&quot;"/>
+      <elementValue elementRef="code" value="&quot;30&quot;"/>
+      <elementValue elementRef="clef" value="&quot;datefin&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;dimanche&quot;"/>
+      <elementValue elementRef="code" value="&quot;10&quot;"/>
+      <elementValue elementRef="clef" value="&quot;ID&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;BB&quot;"/>
+      <elementValue elementRef="code" value="&quot;10&quot;"/>
+      <elementValue elementRef="clef" value="&quot;prenom&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;Daniel&quot;"/>
+      <elementValue elementRef="code" value="&quot;10&quot;"/>
+      <elementValue elementRef="clef" value="&quot;nom&quot;"/>
+      <elementValue elementRef="valeur" value="&quot;Menuet&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="clef" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valeur" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="clef"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="valeur"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="code" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="clef" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valeur" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_844b8b7a-7566-44b7-847d-0594b9ae814b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>x6CtOpnKIPgL2hf/UeGw33Wq+oVQKKW6rEarsJRYbiQzbdkP1Rug8rFdsui/3e/0pej5e83SqMF7
+8T9qXNv2Bw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2999369b-99ac-483d-854b-aff3b926e773"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>52rci33wBb7dTVO42t+LxE7b0LZpfY7Ull4JtLrtyIq9Tn4i7Ph8eIKuGdTGHELKZDOZpBOCTEpW
+KoUOOIAq+w==</DigestValue></Reference></SignedInfo><SignatureValue>M57tROF6R/3Rs47YCDstF/j9YPPzCkitLQCI8Dzxa2Z6IO9lIst9/GbKq5DXxkU+Lh1sKOUM/Oxl
+mpDTlXODT9rPgGNjYaSeeUCW26Rw0h2yCHt3LZrWFy6kE3wq9ECFTNtSE9N1JEbfTe9Bsm6iQ5M6
+/Vh5fKRquB30eP7qF5Dll3Hk1f9njPPT25hSW61DKm/7suJVlJYf/EdNJzBuTHsW3hH75ArJTl6G
+R/9x9oeWoAy4ncxLA4T9FtYfKG2azmxBa5gg8JitQNiEnyCvTreI5/udBAuSwWsv0CXpe60eCpOQ
+05kOnDJQlinXGUFRcljReqrHxB9evEx+owGFaw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -139,4 +260,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8b48b81b-343f-4ab3-ac56-b9204abdcaf9" Target="#_8a341032-5d69-45c3-84c4-02c096c654e4"><Timestamp>2019-03-07 11:11:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2999369b-99ac-483d-854b-aff3b926e773" Target="#_844b8b7a-7566-44b7-847d-0594b9ae814b"><Timestamp>2019-03-07 11:11:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
