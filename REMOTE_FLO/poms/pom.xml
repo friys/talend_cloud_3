@@ -149,13 +149,14 @@
     <module>jobs/process/n/test_ficheir_x_0.1</module>
     <module>jobs/process/tst3_0.1</module>
     <module>jobs/process/n/tst_fichier_cle_valeur_flo_0.1</module>
+    <module>jobs/process/n/tst_file_0.1</module>
   </modules>
   <properties>
     <talend.project.name>REMOTE_FLO</talend.project.name>
     <encoding>UTF-8</encoding>
     <talend.version>7.1.1</talend.version>
-    <talend.docker.tag>${project.version}</talend.docker.tag>
     <maven.deploy.skip>true</maven.deploy.skip>
+    <talend.docker.tag>${project.version}</talend.docker.tag>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
   </properties>
   <build>
