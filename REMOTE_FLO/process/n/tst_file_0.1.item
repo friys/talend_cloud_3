@@ -473,6 +473,7 @@
       <column comment="" key="false" length="-1" name="cle_Bloc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="cle_Bloc_point" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="cle_Champ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique_Individu" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="Individu">
       <column comment="" key="false" length="-1" name="ID_Technique_Individu" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -506,6 +507,7 @@
         <mapperTableEntries expression="row6.cle_Bloc " name="cle_Bloc" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.cle_Bloc_point " name="cle_Bloc_point" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.cle_Champ " name="cle_Champ" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.ID_Technique_Individu " name="ID_Technique_Individu" type="id_Integer"/>
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="&quot;30&quot;.equals(row6.cle_Bloc)" name="Individu" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Var.ID_Technique_Individu " name="ID_Technique_Individu" nullable="true" type="id_Integer"/>
@@ -758,7 +760,6 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="2496" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -789,6 +790,8 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="cle_Champ"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID_Technique_Individu"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -803,6 +806,7 @@
       <column comment="" key="false" length="-1" name="cle_Bloc" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="cle_Bloc_point" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="cle_Champ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique_Individu" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tLogRow_1">
@@ -850,7 +854,16 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
-  <connection connectorName="FLOW" label="Individu" lineStyle="0" metaname="Individu" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_3" target="tLogRow_6">
+  <connection connectorName="FLOW" label="all_S21_G00" lineStyle="0" metaname="all_S21_G00" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_3" target="tLogRow_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="ID_Technique_Individu"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="all_S21_G00"/>
+  </connection>
+  <connection connectorName="FLOW" label="Individu" lineStyle="0" metaname="Individu" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_3" target="tLogRow_6">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="Prenom"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -874,14 +887,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Individu"/>
   </connection>
-  <connection connectorName="FLOW" label="Contrat" lineStyle="0" metaname="Contrat" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_3" target="tLogRow_8">
+  <connection connectorName="FLOW" label="Contrat" lineStyle="0" metaname="Contrat" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_3" target="tLogRow_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Contrat"/>
-  </connection>
-  <connection connectorName="FLOW" label="all_S21_G00" lineStyle="0" metaname="all_S21_G00" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_3" target="tLogRow_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="all_S21_G00"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tLogRow_6" offsetLabelX="0" offsetLabelY="0" source="tLogRow_6" target="tAggregateRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -904,18 +912,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_5"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_db7c8d10-4712-47b9-81d9-83e3fdcda34c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>x1kqIedRHHh4X8EP/JEOWOX8KgcQvCdcQ97xePKzOAzXhZ0fPzfq7tQN9jTHFfFYvPp0COdmky9e
-qkzckEccZA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2935014e-a60a-42b9-8c52-2727b249bbbd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Anl74Z6uZni2aYl7b2Q+clfIOuV/cmTSuEnWkOW4Bbb9NCQXyeP+dUNEQXP8k1I1PN08s8IRB5SC
-uD/uunarXw==</DigestValue></Reference></SignedInfo><SignatureValue>BHZ4ECyLcfSUKDpmdSCBWjY/XF/SJSKVCzG86XgC9mXmJ/DP56zSEznR6BVO0aIO20aqeSKulTcf
-HYMokpyBPqb4JBh7VCne1WRNapV/B7x68Bwb/c0Z7skZ8sSdscSdwABQI++gzW2nFJVGozBUVhFu
-/TpsNTjuGQt4RJ5HfRsjFvLNqN7kBJ7vJnglJau685W6YxZV4+ktsMy/Tw5YfaZctr1N3/KqFpPc
-xyBLmKNi2HSnnpgzBC9Hvj4bZqyzwVgY0cHGiQAtq1j+/qoLtqmBghFmV1Jr50IbwmdGuFRiDp9x
-2Mnk8YGqq59Rd+Xj0oBqLMbeAxTUcEV5yVPbiw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_649675e1-15db-4f59-b5f6-46d271895574"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ORjSgzZXqQmnU+hK+dvvO46Xf++wJhnP9JUTs0ehTE90xGUIEKysfwlj0VUDnJ0fwUl+lG3qWw+8
+84a4vfceoA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0c9b3c05-3ea9-4720-8e59-9b5b8d8b1fb3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>k7J64GYnFYOgmt8+CVAtGmf0F1pfaBiFDOs7Yg8joiLKkT0gHX3ShfEnAG2wG2BeuGWKlE0/4o0T
+Arby3IXrpA==</DigestValue></Reference></SignedInfo><SignatureValue>w9p9yWykGOcYEJxCQBnYIrZLTWtgTjlxGqkiQ4qSQcyw3haiYrDmNEqKEKnIfpmliwqtAalMf+ki
+Fltau4mj+9ayF1eFFnltLlONNlEoCBXCLBeVweea/fX+B4S6GKFPxRM77tw8evIsorfs2hQ1e4uS
+Qu1OxtrlijZc2zKiLrY3Ra2xifvO7fEC1nVs0KJjllTnh91F4zxZ4u6OkxXIDuURDZ/Dmnknbk3Z
+4RdtZRk2a3VHMJlqKwiwFV32kLEhw5gEHOaozvotkrWyOLA3nKbGep/PEkzYD5FEV8UYEwayWN9y
+gC9vNcO1GuJdIWEqCZmu99r3G9aN4tAj1vbDIA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -939,4 +942,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2935014e-a60a-42b9-8c52-2727b249bbbd" Target="#_db7c8d10-4712-47b9-81d9-83e3fdcda34c"><Timestamp>2019-03-07 15:22:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0c9b3c05-3ea9-4720-8e59-9b5b8d8b1fb3" Target="#_649675e1-15db-4f59-b5f6-46d271895574"><Timestamp>2019-03-07 15:28:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
