@@ -246,6 +246,7 @@
     </metadata>
     <metadata connector="FLOW" name="block10">
       <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="prenom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -268,6 +269,7 @@
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="&quot;10&quot;.equals(row2.code)" name="block10" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Var.ID_Technique " name="ID_Technique" type="id_Integer"/>
+        <mapperTableEntries expression="&quot;ID&quot;.equals(row2.clef) ? row2.valeur : null " name="ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;prenom&quot;.equals(row2.clef) ? row2.valeur : null " name="prenom" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;nom&quot;.equals(row2.clef) ? row2.valeur : null " name="nom" nullable="true" type="id_String"/>
       </outputTables>
@@ -336,6 +338,8 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="ID_Technique"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="prenom"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="nom"/>
@@ -346,6 +350,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_3">
       <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="prenom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -354,9 +359,23 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMemorizeRows_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="ROW_COUNT" value="1"/>
-    <elementParameter field="TABLE" name="SPECIFY_COLS"/>
+    <elementParameter field="TABLE" name="SPECIFY_COLS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID_Technique"/>
+      <elementValue elementRef="MEMORIZE_IT" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
+      <elementValue elementRef="MEMORIZE_IT" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="prenom"/>
+      <elementValue elementRef="MEMORIZE_IT" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="nom"/>
+      <elementValue elementRef="MEMORIZE_IT" value="false"/>
+    </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMemorizeRows_1"/>
+    <metadata connector="FLOW" name="tMemorizeRows_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="prenom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -386,9 +405,17 @@
       <elementValue elementRef="TRACE_COLUMN" value="prenom"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="block10"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tLogRow_3" offsetLabelX="0" offsetLabelY="0" source="tLogRow_3" target="tMemorizeRows_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
@@ -400,13 +427,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_38b81218-5eff-4f29-bb48-f33853cfbae3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sI6PRnIG+zKw0tpWsRxC/3wDLbsneHtmwo0sEFlQF6n8k4nOAz+nFMCEiug/S3Z5jFtRc1WyPpv0
-RUOBwRxt6w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ec13b4ef-3593-4e37-9149-0e0be568ab7d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oWbBrKukeDzuDrIUuHRQ9T9s/I4Hf8JMAlHL6K5Knv2G2a+H4NgH5dkwwbRnEt5iTUwA6/tzqw+P
-i+iFzarJmQ==</DigestValue></Reference></SignedInfo><SignatureValue>JdjmBmYoY18dka4VmOyxcMi8lY0P8xD7Um80XwZFssou6T14RUUCHcgDUv0oaY39uE73yMNoLc+1
-sRxr7GSzbMW6zaBI5naB/hNzP5vad/YgjAgzqZ0YyOgswesD0lmAjD3I5aquI/H6zF2j4RRu8Ia/
-Z9SzRrDk4hSKY0G9BSXynlGaPXE1XQm0lJl2j+kt/n1hnyGdIlHcRqbMLFQm3IUo9+Q5UC4PIYQZ
-Bi1ydrnko7Ap5tv4YDJD+gx5Hjb+/Ko1aOIMuFGeuS+KzhvbMMcgCsCTUviUx1CTnTHGBQrqggjR
-EHw1dOUEZN7Qplivp7ZvGe0GofetnbUmTMIlfA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_332b3a86-7bd4-41d7-b5e8-363a200ed077"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>20tqSFYurU97aKNt1srDvoMC4H25W42h+Qc8cmlaxETZnOLwucxtTRQ7V1ABLCOW/AJpu5vaTadL
+M8MGJLbFGQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_720ad4aa-096a-4fc0-9639-16d30c4b972a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H4y+Llg9pHQiuDw7vu5isqsjp/yn2XpnL4Li5Fqwt1mgydUR3Vb47Yce0j3qpJ14/3VM62p8ZBPZ
+s44KveUReQ==</DigestValue></Reference></SignedInfo><SignatureValue>4IpoZElnU22WfADq8Xjri8dcxYKCwADCw/R/Zv9cV84WoR4iMK/jf3PU8b5ZA//PoPf/iMEP3i9z
+XAfTSHHoYUc4u+nqk2i2USbaIKtHqABiApbrI1M33tb+7ZolE9hwpdXSEAkPSNAeRgQazAxkwjyd
+mZUKkaCZD6TsOo4iQ921kqYegUboA79L5UQUyj0YDLbetYJ8skEtRp29DzaF8SFmfj9tlStS4xJz
+L+8sxdNbMX9Gz6/sar3D+Z9qhn+BUPXTFa1bRaTjiCmzL39rzByxmK4oaFScCaKUpKl49MOLzMg6
+TfUC3wBRd0sGp40fBy0PtY5RnejAtKPkp8XJlQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -430,4 +457,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ec13b4ef-3593-4e37-9149-0e0be568ab7d" Target="#_38b81218-5eff-4f29-bb48-f33853cfbae3"><Timestamp>2019-03-07 13:45:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_720ad4aa-096a-4fc0-9639-16d30c4b972a" Target="#_332b3a86-7bd4-41d7-b5e8-363a200ed077"><Timestamp>2019-03-07 13:48:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
