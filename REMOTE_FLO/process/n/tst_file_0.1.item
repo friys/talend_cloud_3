@@ -704,6 +704,8 @@
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="ID_Technique_Individu"/>
       <elementValue elementRef="INPUT_COLUMN" value="ID_Technique_Individu"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="ID_Technique_Contrat"/>
+      <elementValue elementRef="INPUT_COLUMN" value="ID_Technique_Contrat"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
       <elementValue elementRef="OUTPUT_COLUMN" value="Date_Debut_Contrat"/>
@@ -726,6 +728,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_2">
       <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique_Individu" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID_Technique_Contrat" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Date_Debut_Contrat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Statut_Salarie" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Libelle_Emploi" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -747,6 +750,8 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="ID_Technique_Individu"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID_Technique_Contrat"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Date_Debut_Contrat"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Statut_Salarie"/>
@@ -759,6 +764,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_9">
       <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique_Individu" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID_Technique_Contrat" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Date_Debut_Contrat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Statut_Salarie" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Libelle_Emploi" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -923,13 +929,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e09b2ebb-dd5e-48c3-b321-9a7b3b6779c7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ijIw0N/pfP4vD13Ms74cz7eRYbUgvFuS95FUEoFp5Brr7CXzL3iDm0i1raHlW9Sd2eBEvWBjn28A
-4erzgHEVvw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_778f7640-ceec-4f89-bd91-b44db783c8b5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TGc+bu3HwYwInMdmC8hiyASCERzujEPVmN2Wp+zHf0WierN82JykMqEHeWSUGmEc1uA9DnXIgPyI
-3xpNmBcczg==</DigestValue></Reference></SignedInfo><SignatureValue>Jp/4g18FTV2oPQwzWGYUqkI1TbkzxzQ0MJLu+p8jEWgg4ndjSNiDLaIhTOMTQPrQnZOu6+5vuFHj
-AMISiPpyfZUF2jZHE15PJDaTIchDkaj749GKoqh4tEY5PFTnHL1oz8Au3QXodZMJq/KmcfAx7jsk
-FXmRwShn2VRZAaODSIRll4qdzFX0jUXVF61+xm+GgAKeTjnXJJlj9anfimGiGNwE1NRLdpD9AIZR
-pSHD+jz09efV9boTcJHNv2BpV1hUZIC5o9BfFD25t9W+eRWHlp3v1cXkF9dtvkIj/M92ExQGkgNg
-g8lk7uu2MEEqLYnRNuY3nuC32p2PA2G4zZYIJA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8ba86cca-ed4e-430d-b9be-af8d8733603b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>stNbTuSTtOg8Rt3AQmiCC6PkGOB3XVea3apEjdJ53wcAFVNB6ymsjBqRkmExlpjtnSWiAWr6Xl0o
+PNBzu/mycw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_225edd8c-7d1c-4a18-95fe-7d67a349f644"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p0/Dt3QcRLyohyiOhiX6Z92AvXv58Ba314vg/ZgWmKjqcmAzUp1mShKCqfKJ9uYcbNc7pRe6h5N2
+MzThg+dkjA==</DigestValue></Reference></SignedInfo><SignatureValue>ddNbnUOn/jVpXfGxkNnKKv78K3QY/dJBkl1O6xSie4S0WaSLCpXjjND1USngVHRmxfdQvBUYWXpq
+WcdqWWxNhIB39ruGfxWRqkQi+E1IfiUD+m1qfxXrIdJirIKq3ChGpUEXzccb7H/jva/+lcLmHGJ8
+a7aUntAL5SiQrLx6HOZv7dZSK6Cz2Eu9EpNdnnk74Y9sxBhiQlwxReCE+BDp19oJZkHYwAkIdk0b
+XZe2oR/8hHRcMcrn/nBoTsYuitJJpajwC23cgTfD2z40nzeYvb+d62V7Us8/FrVUdBmiwQya/abJ
+oXAzdgxAbl8GZGpXGJ/WGlBADHb+kk2rPoMhNA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -953,4 +959,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_778f7640-ceec-4f89-bd91-b44db783c8b5" Target="#_e09b2ebb-dd5e-48c3-b321-9a7b3b6779c7"><Timestamp>2019-03-07 16:49:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_225edd8c-7d1c-4a18-95fe-7d67a349f644" Target="#_8ba86cca-ed4e-430d-b9be-af8d8733603b"><Timestamp>2019-03-07 16:51:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
