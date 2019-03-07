@@ -475,11 +475,21 @@
       <column comment="" key="false" length="-1" name="cle_Champ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="Individu">
-      <column comment="" key="false" length="-1" name="cle_Champ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID_Technique_Individu" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NIR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Nom_Famille" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Nom_Usage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prenom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sexe" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Var.Bloc_Actuel " name="Bloc_Precedent" type="id_String"/>
+        <mapperTableEntries expression="row6.cle_Bloc " name="Bloc_Actuel" type="id_String"/>
+        <mapperTableEntries expression="Var.Bloc_Actuel.equals(Var).Bloc_Precedent " name="Bloc_Identique" type="id_Boolean"/>
+        <mapperTableEntries expression="!Var.Bloc_Identique &amp;&amp; &quot;30&quot;.equals(row6.cle_Bloc) ? Numeric.sequence(&quot;Individu&quot;,1,1) : Numeric.sequence(&quot;Individu&quot;,1,0) " name="ID_Technique_Individu" type="id_Integer"/>
+      </varTables>
       <outputTables name="all_S21_G00" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.cle_1 " name="cle_1" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.valeur " name="valeur" nullable="true" type="id_String"/>
@@ -492,7 +502,12 @@
         <mapperTableEntries expression="row6.cle_Champ " name="cle_Champ" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables activateExpressionFilter="true" expressionFilter="&quot;30&quot;.equals(row6.cle_Bloc)" name="Individu" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row6.valeur" name="cle_Champ" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.ID_Technique_Individu " name="ID_Technique_Individu" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="&quot;001&quot;.equals(row6.cle_Champ)?row6.valeur:null " name="NIR" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;002&quot;.equals(row6.cle_Champ)?row6.valeur:null " name="Nom_Famille" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;003&quot;.equals(row6.cle_Champ)?row6.valeur:null " name="Nom_Usage" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;004&quot;.equals(row6.cle_Champ)?row6.valeur:null " name="Prenom" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;005&quot;.equals(row6.cle_Champ)?row6.valeur:null " name="Sexe" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
         <mapperTableEntries name="cle_1" nullable="true" type="id_String"/>
@@ -521,14 +536,29 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="cle_Champ"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID_Technique_Individu"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NIR"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Nom_Famille"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Nom_Usage"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Prenom"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sexe"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_6">
-      <column comment="" key="false" length="-1" name="cle_Champ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ID_Technique_Individu" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NIR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Nom_Famille" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Nom_Usage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prenom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Sexe" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="2496" posY="96">
@@ -631,6 +661,26 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="all_S21_G00"/>
   </connection>
   <connection connectorName="FLOW" label="Individu" lineStyle="0" metaname="Individu" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_3" target="tLogRow_6">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Prenom"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ID_Technique_Individu"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NIR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sexe"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Nom_Usage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Nom_Famille"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Individu"/>
   </connection>
@@ -644,13 +694,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d972f9f6-a430-409f-9b33-173e7c9103f1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c1NlBkI39gx62k9yZ/BmFBtWQgFnE33NPQjDcOvxIXPcC0hUCr8XNVF+eTY2JrFQRSE+uySf1Avo
-dUFrKHxDJw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0b7fe44b-3f56-4ce2-8158-b8d959b8cc03"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Fd+bDk/+EygPiZS066K6imlW19MgcrT2HBuB5mu/rRxdMNoNgyivcMrkX+NZCP1Xq70hAhRyjlrW
-hCQ/S7vuoQ==</DigestValue></Reference></SignedInfo><SignatureValue>FF1aNyrgvb2R1PfXAM4LzMSEaFYtXEoIrbJ/S3XKRSp/Lx3I2B7E+RstdMWWFFjxF8+4DYmrZi1h
-jLVyI2Z0b4ReQRm2DITxHfjrx/SYdHj1YETAViEl0NKEcj1tq729bQZ1B6vWBvW4mF+2NdbVRdcp
-wQeM6KKLqvT4Gjf4FXOV/yKrp6MnBfUxclxphPOM7PJz49wxDTM2aPW4EmHhUEymxacgyt1B4qB8
-jmZdYeKHn3sGXJxf862gzAe0RBNkBKMu7gZpjlJIdoHP8VAtwUOqhZsykkc9jUASzGaEdPpJPOpc
-k58OW8dndkT6/AIrUXyHlrjt95+YNwzGLeGXFw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2ae79fec-5c7c-466c-aaee-0b3a5cf961bd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Gai79y1KNHPuzqvWn5SlZyflsuNWWWGZSnCO/63Nwkot0V2YL6cO4U6lBhD+VY4fZXganGRR+d+s
+JtR7paJZzg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_498aa359-7a58-42c7-90bc-8828d89116ce"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o+S4IYDbLtj+DcGAbPDLdfhh89D944QHngGdbbQAkByQFQnlfuZXdcZlVKlM42xP7uQA9a7ZFKFa
+MbN4/DSQvg==</DigestValue></Reference></SignedInfo><SignatureValue>YE6ts3LQ8zNQIJKbB6ec+LpczP9F6zebOYezcDJGIASxk9ggmFsOjOzU77BbLIMb6H7yJRH/S9DH
+DDyjvSVO00AEIXdcFgDSO90mWFQCGeK1BUnIjBplt2bpbhJZAeVCs9X6TxX1Sn1s6/OHRnTVOxP3
+UyCDd9L3ZpSdBVLirNKAvR4vTpaqvMqyg4F8AIabjHsssEWoWGJyI3b9j/CA4e0Z+QxFu381u8yY
+HVNyoMR/DhhcN1lOaL+ZZQxgn87I8v0BvLOUEaVNOMx2zWai0/0Y55WOIhtmO2iAKTEXSY4pnIHl
++r+e2Ka5uHx2Yfe5yTdqdDsMn7V4tvvqKBPBOA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -674,4 +724,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0b7fe44b-3f56-4ce2-8158-b8d959b8cc03" Target="#_d972f9f6-a430-409f-9b33-173e7c9103f1"><Timestamp>2019-03-07 14:46:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_498aa359-7a58-42c7-90bc-8828d89116ce" Target="#_2ae79fec-5c7c-466c-aaee-0b3a5cf961bd"><Timestamp>2019-03-07 15:10:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
