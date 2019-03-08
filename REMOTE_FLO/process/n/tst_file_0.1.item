@@ -479,6 +479,7 @@
     </metadata>
     <metadata connector="FLOW" name="Contrat">
       <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique_Individu" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique_Contrat" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Date_Debut_Contrat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Statut_Salarie" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Libelle_Emploi" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -490,7 +491,7 @@
         <mapperTableEntries expression="row6.cle_Bloc " name="Bloc_Actuel" type="id_String"/>
         <mapperTableEntries expression="Var.Bloc_Actuel.equals(Var.Bloc_Precedent) " name="Bloc_Identique" type="id_Boolean"/>
         <mapperTableEntries expression="!Var.Bloc_Identique &amp;&amp; &quot;30&quot;.equals(row6.cle_Bloc) ? Numeric.sequence(&quot;Individu&quot;,1,1) : Numeric.sequence(&quot;Individu&quot;,1,0) " name="ID_Technique_Individu" type="id_Integer"/>
-        <mapperTableEntries expression="!Var.Bloc_Identique &amp;&amp; &quot;40&quot;.equals(row6.cle_Bloc) &amp;&amp; &quot;001&quot;.equals(row6.cle_Champ) ? Numeric.sequence(&quot;Contrat&quot;,1,1) : Numeric.sequence(&quot;Contrat&quot;,1,0) " name="ID_Technique_Contrat" type="id_Integer"/>
+        <mapperTableEntries expression="&quot;40&quot;.equals(row6.cle_Bloc) &amp;&amp; &quot;001&quot;.equals(row6.cle_Champ) ? Numeric.sequence(&quot;Contrat&quot;,1,1) : Numeric.sequence(&quot;Contrat&quot;,1,0) " name="ID_Technique_Contrat" type="id_Integer"/>
       </varTables>
       <outputTables name="all_S21_G00" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.cle_1 " name="cle_1" nullable="true" type="id_String"/>
@@ -514,6 +515,7 @@
       </outputTables>
       <outputTables name="Contrat" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Var.ID_Technique_Individu " name="ID_Technique_Individu" type="id_Integer"/>
+        <mapperTableEntries expression="Var.ID_Technique_Contrat " name="ID_Technique_Contrat" type="id_Integer"/>
         <mapperTableEntries expression="&quot;001&quot;.equals(row6.cle_Champ)?row6.valeur:null " name="Date_Debut_Contrat" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;002&quot;.equals(row6.cle_Champ)?row6.valeur:null " name="Statut_Salarie" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;006&quot;.equals(row6.cle_Champ)?row6.valeur:null " name="Libelle_Emploi" nullable="true" type="id_String"/>
@@ -667,6 +669,8 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="ID_Technique_Individu"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID_Technique_Contrat"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Date_Debut_Contrat"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Statut_Salarie"/>
@@ -679,6 +683,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_8">
       <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique_Individu" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="ID_Technique_Contrat" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Date_Debut_Contrat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Statut_Salarie" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Libelle_Emploi" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -941,13 +946,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9d5ac05d-c27a-486d-8067-68d450808529"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BbvlhEkRkOzYCZL3PwKuNCRTvSMbM5sVIKteJqCnjM2DJ/4QrBWBhI4Hm4Y5rf7i4cbHuBR+AjKV
-5+1e2382ig==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_80a78583-5579-4775-9745-736e7df50553"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dRwU1z69aZltLZV9Lsh5aRmkt5OJn8uOKAiCuqAhT/nTRaQQYAMpbjuEnCFmY24fB+sXygXSv05+
-1p6Hs5mZzg==</DigestValue></Reference></SignedInfo><SignatureValue>KrqB46AvTGnktu0FykS7YbpJWA4hGDuNLUdfNlnr32sycBagEE0Nj9ii2CeYQh0i4efxgt5Mn51F
-Do+YP6mEFVnMWtJ2G7YsoNVN014hbV+RUpSqX9xpA+fuX1Xz7B1sfV9G7qWahxxHAFKvreMZh1Cl
-x66UbzvgACSNUKueBEsfBNnnKrVkmQRaCaIXDjKlLImJyJEE4EKUhQhDjSwNizvaFNAQOfcdHo6W
-XXcNtHb1Y40BE4RiNVdi3pdUiBDBZ5VSbZ/OHsuKTaPxLL3luTY1zbvZlASVpVy7tm+i7orqI1vM
-6gXNyZHtmKy3hKn7B5gOuivaDYQt5S5X+b9sVA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bed45556-d506-413a-bd5e-f1b90922fe50"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+cxXaggaOWhQI0W9wiOpVawIsFd3powjoi8BkwkJi32Q5lqKn7EsLd5vq4EIGscs38I7d/bXmL0+
+99BDAVWaxw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4d1648c0-99e9-47d2-a52f-fb0626d57b93"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XEEqjuWbQNg6TnShhkqlysdU+DYZ2+Fo/41h7qBOGqGzGbK4C5TlK+erIkPyJzfCMVOh/BdXaDwB
+VcapPEx9HQ==</DigestValue></Reference></SignedInfo><SignatureValue>zlibXm5ugMiywHxSUGsCwU5R7oFwfOKQlF+9eNuHcW6Impc2vUwFbaZAbWzmPT+5MftbTVdrFeGR
+0jc+QO8yfT9N1uzV/fRRa66FFw+BZfRdRoH0nHccJ3KBWUFDF0BWUeRRrfjeW8IKQyRHO/6NZvCK
+ttXgl/ZHG+fRRgjk6UOfeh73p4+yDmlJmx254Jdp/cdv/Izs435AOH/xWh48WTqfnatZHY0iWkzJ
+m6t3VP6T8VMnqGL9pezrMkVZ0ckqSLC3ecZiZufAQlnXjhoi901iXbXyVAA1Kw7bWWB+cfxIj35C
+P3IW+SABCVpIqeQtarYeIppF2LoAAJ9osaWaOg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -971,4 +976,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_80a78583-5579-4775-9745-736e7df50553" Target="#_9d5ac05d-c27a-486d-8067-68d450808529"><Timestamp>2019-03-07 17:09:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4d1648c0-99e9-47d2-a52f-fb0626d57b93" Target="#_bed45556-d506-413a-bd5e-f1b90922fe50"><Timestamp>2019-03-08 07:49:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
