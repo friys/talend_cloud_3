@@ -150,6 +150,8 @@
     <module>jobs/process/tst3_0.1</module>
     <module>jobs/process/n/tst_fichier_cle_valeur_flo_0.1</module>
     <module>jobs/process/n/tst_file_0.1</module>
+    <module>jobs/process/copy_of_xmlplusieurspasses_0.1</module>
+    <module>jobs/process/xmlplusieurspasses_0.1</module>
   </modules>
   <properties>
     <talend.project.name>REMOTE_FLO</talend.project.name>
