@@ -1,0 +1,1001 @@
+
+/** template routine Java
+C�dric Houpe - Ysance
+cedric.houpe@ysance.com
+*/
+package routines;
+
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.UUID;
+import java.util.regex.Pattern;
+import java.text.Normalizer;
+
+/*
+Classe Contenant des fonctions generiques
+ */
+public class YsanceRoutines {
+
+	public static String VAL_DEFAUT_STRING = "NA";
+	public static int VAL_DEFAUT_NUMERIQUE = 0;
+	public static Date VAL_DEFAUT_DATE = null;
+	
+	private static String REGEXP_PATTERN_EMAIL = "^[_A-Za-z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ\\+-]+(\\.[_A-Za-z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ\\+-]+)*@[_A-Za-z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ-]+(\\.[_A-Za-z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ-]+)*(\\.[A-Za-z]{2,})$";
+
+	/**
+	 * Vérifie qu'une chaine passée en paramètre est vide ou nulle
+	 * @param aSrc
+	 * @return
+	 */
+	public static boolean isNullOrEmpty(String aSrc) {
+		return aSrc==null || "".equals(aSrc);
+	}
+	
+	
+	
+	/**
+	 * Vérifie que la date passée en paramètre correspond à la date du jour sans prendre en compte l'heure
+	 * @param aParamDate
+	 * @return
+	 */
+	private static boolean isDateJour(Date aParamDate) {
+		if (aParamDate==null)
+			return false;
+		
+		return (truncDate(aParamDate).compareTo(truncDate(TalendDate.getCurrentDate()))==0);
+	}
+	
+	
+	/**
+	 * Renvoie une chaine de caractère correspondant à la complétion à gauche
+	 * d'une valeur par un complément pour atteindre une longueur maximale
+	 * @param aValue
+	 * @param aComplement
+	 * @param aLongueur
+	 * @return
+	 */
+	public static String completerGaucheNumerique(Integer aValue, Integer aComplement, Integer aLongueur) {
+		if (aValue==null || aComplement==null || aLongueur==null || aLongueur<0)
+			return null;
+		
+		String lResult = ""+aValue;
+		
+		if (lResult.length()>=aLongueur)
+			return lResult;
+		
+		return aComplement+completerGaucheNumerique(aValue,aComplement,aLongueur-1);
+	}
+	
+	
+	/**
+	 * Teste si un email passé en paramètre a une structure valide. 
+	 * La structure attendue est
+	 *  - un ensemble de caractère alphanumérique
+	 *  - un séparateur @
+	 *  - un ensemble de caractère alphanumérique
+	 *  - un séparateur .
+	 *  - une chaine de caractère comprise en 2 et 4 caractère
+	 * 
+	 * @param aEmail
+	 * @return
+	 */
+	public static boolean isEmailValide(String aEmail) {
+		return Pattern.matches(REGEXP_PATTERN_EMAIL,aEmail);
+		
+	}
+	
+
+	/**
+	 * retourne une chaine de caractère normalisée sans accents
+	 * 
+	 * @param input
+	 * @return result (chaine sans accents)
+	 */
+	public static String replaceAccents(String input) {
+		if (input==null)
+			return null;
+		
+		String result=  java.text.Normalizer.normalize(input , java.text.Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+		return result; 
+		
+	}
+	
+	/**
+	 * Retourne une date correspondant � la date ddMMyyyy 
+	 * du premier param�tre date et l'heure du deuxi�me param�tre
+	 * @param aDate param�tre contenant la date 
+	 * @param aHeure param�tre contenant l'heure
+	 * @return une date correspondant � la date ddMMyyyy 
+	 * du premier param�tre date et l'heure du deuxi�me param�tre
+	 */
+	public static Date mergeDateHeure(Date aDate, Date aHeure) {
+		String lStringDate = null;
+		String lStringHeure = null;
+		
+		if (aDate==null)
+			lStringDate = "01011970";
+			else lStringDate = formatDateToPattern(aDate,"ddMMyyyy");
+		
+		if (aHeure==null)
+			lStringHeure = "000000";
+			else lStringHeure =  formatDateToPattern(aHeure,"HHmmss");
+		
+		return TalendDate.parseDate("ddMMyyyy HHmmss", lStringDate+" "+lStringHeure);
+	}
+	
+	/**
+	 * Cr�ation d'un UUID
+	 * @return Identifiant UUID
+	 */
+	public static synchronized String CreateUUID(){
+		return UUID.randomUUID().toString();
+	}
+	
+	/**
+	 * Effectue un substring sur une chaine en testant pr�alablement si la valeur est null 
+	 * et si la longueur est sup�rieure � celle attendue pour ne pas avoir une exception ArrayoutOfBoundException
+	 * @param aChaine
+	 * @param aDebut index de d�but
+	 * @param aFin index de fin
+	 * @return Chaine substring - null si chaine en parametre vaut nulle
+	 */
+	public static String substr(String aChaine, int aDebut, int aFin) {
+		if (aChaine==null)
+			return null;
+		
+		String lResult = "";
+		
+		int lLongueurSubstr = aFin+1-aDebut;
+		
+		if (aChaine.length()<lLongueurSubstr)
+			lResult = aChaine;
+			else lResult = aChaine.substring(aDebut,aFin);
+				
+		return lResult;
+	}
+	
+	/**
+	 * Fonction permettant de supprimer les heures d'une date pass�e en param�tre
+	 * @param aSource Date pour laquelle il faut supprimer les heures
+	 * @return Date sans les heures correspondant � la date pass�e en param�tre
+	 */
+	public static Date truncDate(Date aSource) {
+		if (aSource==null)
+			return null;
+		
+
+		SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
+		sdf.setLenient(true);
+	  	  	
+		Date lResult = null;
+		
+	  	try {
+		   lResult =sdf.parse(sdf.format(aSource));
+	  	} catch (Exception e) {
+	  		lResult = null;
+	  	}		
+		
+		return lResult;
+	}
+	
+	/**
+	 * Retourne la valeur max de deux doubles.
+	 * @param aArg1 Argument 1
+	 * @param aArg2 Argument 2
+	 * @return valeur max de deux doubles.
+	 */
+	public static Double max(Double aArg1, Double aArg2) {
+		if (aArg1==null && aArg2==null)
+			return null;
+		
+		if (aArg1==null)
+			return aArg2;
+		
+		if (aArg2==null)
+			return aArg1;
+		
+		return (aArg1<aArg2)?aArg2:aArg1;
+	}
+	
+	/**
+	 * Retourne la diff�rence de jours entre 2 dates. Retourne null si une des deux dates est vide
+	 * @param aDateFrom Date de d�part
+	 * @param aDateTo Date de limite
+	 * @return diff�rence de jours entre 2 dates. Retourne null si une des deux dates est vide
+	 */
+	public static Integer diffJours(Date aDateFrom, Date aDateTo) {
+		if (aDateFrom==null || aDateTo==null)
+			return null;
+
+		Long lLongValue = Math.abs(aDateFrom.getTime()-aDateTo.getTime()) / (1000*60*60*24);
+		
+		return lLongValue.intValue();
+	}
+	
+	/**
+	 * Retourne la diff�rence de minutes entre 2 dates. Retourne null si une des deux dates est vide
+	 * @param aDateFrom Date de d�part
+	 * @param aDateTo Date de limite
+	 * @return diff�rence de minutes entre 2 dates. Retourne null si une des deux dates est vide
+	 */
+	public static Integer diffMinutes(Date aDateFrom, Date aDateTo) {
+		if (aDateFrom==null || aDateTo==null)
+			return null;
+
+		Long lLongValue = Math.abs(aDateFrom.getTime()-aDateTo.getTime()) / (1000*60);
+		
+		return lLongValue.intValue();
+	}
+
+	
+	/**
+	 * Retourne la diff�rence de mois entre 2 dates. Retourne null si une des deux dates est vide
+	 * @param aDateFrom Date de d�part
+	 * @param aDateTo Date de limite
+	 * @return diff�rence de mois entre 2 dates. Retourne null si une des deux dates est vide
+	 */
+	public static Integer diffMois(Date aDateFrom, Date aDateTo) {
+		if (aDateFrom==null || aDateTo==null)
+			return null;
+			
+	       GregorianCalendar gc1 = new GregorianCalendar();
+	        gc1.setTime(aDateTo);
+	        GregorianCalendar gc2 = new GregorianCalendar();
+	        gc2.setTime(aDateFrom);
+	        int lDifference = 0;
+	        gc1.add(GregorianCalendar.MONTH, 1);
+	        while(gc1.compareTo(gc2)<=0) {
+	        	lDifference++;
+	            gc1.add(GregorianCalendar.MONTH, 1);
+	        }
+	        return lDifference;
+	}
+	
+	/**
+	 * Indique si la chaine correspond � une valeur num�rique
+	 * @param aSource chaine a convertir
+	 * @return true si la chaine correspond � une valeur num�rique
+	 */
+	public static boolean isNumber(String aSource) {
+		boolean lResultat = false;
+		try {
+			double lConvert = Double.parseDouble(aSource);
+			lResultat = true;
+		} catch (Exception ex) {
+			lResultat = false;
+		}
+		return lResultat;
+	}
+	
+	/**
+	 * Indique le nombre d'occurence d'un param�tre dans une chaine source
+	 * @param aSource chaine complete dans laquelle chercher le deuxieme param�tre
+	 * @param aToken chaine a chercher
+	 * @return nombre d'occurence de aToken dans aSource
+	 */
+	public static int numberOfToken(String aSource, String aToken) {
+		if (aSource==null || "".equals(aSource))
+			return 0;
+		
+		int lPos = aSource.indexOf(aToken);
+		
+		if (lPos==-1)
+			return 0;
+			else return 1+ numberOfToken(aSource.substring(lPos+1),aToken);
+	}
+	
+	/**
+	 * Indique si une valeur pass�e en param�tre est comprise dans des bornes �galement pass�es en param�tres
+	 * @param aValue
+	 * @param aMin
+	 * @param aMax
+	 * @return
+	 */
+	public static boolean between(BigDecimal aValue, BigDecimal aMin, BigDecimal aMax) {
+		System.out.println("-----------");
+		System.out.println("aValue="+aValue.toString());
+		System.out.println("aMin="+aMin.toString());
+		System.out.println("aMax="+aMax.toString());
+		System.out.println("result="+(aValue.compareTo(aMin)==-1 // aValue < aMin
+				&& aValue.compareTo(aMin)==0// aValue = aMin
+
+				&& aValue.compareTo(aMax)==1// aValue > aMax
+				&& aValue.compareTo(aMax)==0));
+		
+		return  
+		aValue.compareTo(aMin)==-1 // aValue < aMin
+		&& aValue.compareTo(aMin)==0// aValue = aMin
+
+		&& aValue.compareTo(aMax)==1// aValue > aMax
+		&& aValue.compareTo(aMax)==0;// aValue = aMax;
+	}
+	
+	/**
+	 * Ajoute (ou Soustrait) un nombre de jour pass� en param�tre � une date �galement
+	 * pass�e en param�tre
+	 * @param aDateReference Date � laquelle ajouter les ann�es
+	 * @param aNbYear Nombre de jour � ajouter (peut �tre n�gatif)
+	 * @return Date r�sultat de l'ajout du nombre d'ann�e � la date param�tre
+	 */
+	public static Date addDay(Date aDateReference, int aNb) {
+		GregorianCalendar lResultatGC = new GregorianCalendar();
+		lResultatGC.setTime(aDateReference);
+		lResultatGC.add(Calendar.DATE, aNb);
+		return lResultatGC.getTime();
+	}
+
+	
+	/**
+	 * Ajoute (ou Soustrait) un nombre de mois pass� en param�tre � une date �galement
+	 * pass�e en param�tre
+	 * @param aDateReference Date � laquelle ajouter les ann�es
+	 * @param aNb Nombre de mois � ajouter (peut �tre n�gatif)
+	 * @return Date r�sultat de l'ajout du nombre d'ann�e � la date param�tre
+	 */
+	public static Date addMonth(Date aDateReference, int aNb) {
+		GregorianCalendar lResultatGC = new GregorianCalendar();
+		lResultatGC.setTime(aDateReference);
+		lResultatGC.add(Calendar.MONTH, aNb);
+		return lResultatGC.getTime();
+	}
+	
+	/**
+	 * Ajoute (ou Soustrait) un nombre d'ann�e pass� en param�tre � une date �galement
+	 * pass�e en param�tre
+	 * @param aDateReference Date � laquelle ajouter les ann�es
+	 * @param aNb Nombre d'ann�e � ajouter (peut �tre n�gatif)
+	 * @return Date r�sultat de l'ajout du nombre d'ann�e � la date param�tre
+	 */
+	public static Date addYear(Date aDateReference, int aNbYear) {
+		GregorianCalendar lResultatGC = new GregorianCalendar();
+		lResultatGC.setTime(aDateReference);
+		lResultatGC.add(Calendar.YEAR, aNbYear);
+		return lResultatGC.getTime();
+	}
+	
+	/**
+	 * Indique si la date pass�e en param�tre est ant�rieure � la date du jour
+	 * True si la date est null
+	 * @param aDateReference
+	 * @return true si la date est ant�rieure � la date du jour ou est null
+	 */
+	public static boolean isBeforeCurrentDate(Date aDateReference) {
+		if (aDateReference==null) return true;
+		
+		GregorianCalendar lGC = new GregorianCalendar();
+		lGC.setTime(aDateReference);
+		
+		return lGC.before(new GregorianCalendar());
+	}
+	
+	
+	/**
+	 * Routine permettant de calculer l'�ge par rapport � une date de naissance pass�e en param�tre
+	 * @param aDateNaissance Date de naissance de r�f�r�nce pour le calcul de l'�ge
+	 * @return int Valeur de l'�ge associ�e � la date de naissance
+	 */
+	public static int calculerAge(java.util.Date aDateNaissance) {
+		int lAge = -1;
+		
+		java.util.Calendar lCalendarDateNaissance = new java.util.GregorianCalendar();
+		lCalendarDateNaissance.setTime(aDateNaissance);
+		
+
+		java.util.Calendar lCalendarDateJour = new java.util.GregorianCalendar();	
+		
+		lAge = lCalendarDateJour.get(java.util.Calendar.YEAR) - lCalendarDateNaissance.get(java.util.Calendar.YEAR);
+
+		// Si la date d'anniversaire n'est pas pass�e, il faut soustraire une ann�e � l'anniversaire.
+		lCalendarDateNaissance.set(java.util.Calendar.YEAR,lCalendarDateJour.get(java.util.Calendar.YEAR));
+		
+		if (lCalendarDateNaissance.after(lCalendarDateJour))
+			lAge = Math.max(0, lAge-1);
+		
+		
+		
+		return lAge;
+		
+	}
+	
+	
+	/**
+	 * Convertit une chaine pass�e en param�tre en un BigDecimal
+	 * apr�s avoir n�ttoyer cette chaine
+	 * @param aSource
+	 * @return BigDecimal associ�e � la chaine source
+	 */
+	public static java.math.BigDecimal convertBigDecimal(String aSource) {
+		if (aSource==null)
+			return null;
+		
+		java.math.BigDecimal lBD = null;
+		
+		try {
+			String lChaineNettoyee = nettoyerChaine4BigDecimal(aSource);
+			if (lChaineNettoyee==null || "".equals(lChaineNettoyee))
+				lBD = null;
+				else lBD = new java.math.BigDecimal(lChaineNettoyee);
+		} catch (Exception ex) {
+			lBD = null;
+		}
+		
+		return lBD;
+	}
+	/**
+	 * Convertit un integer en param�tre en un BigDecimal
+	 * apr�s avoir n�ttoyer cette chaine
+	 * @param aSource
+	 * @return BigDecimal associ�e � la chaine source
+	 */
+	public static java.math.BigDecimal convertIntegerBigDecimal(Integer aSource) {
+		
+			
+		
+		if (aSource==null)
+			return null;
+		
+		java.math.BigDecimal lBD = null;
+		
+		try {
+			lBD = new BigDecimal(aSource);
+		} catch (Exception ex) {
+			lBD = null;
+		}
+
+	
+		return lBD;
+	}
+	/**
+	 * Convertit une chaine sous le format ### ###,## en Float. Retourne 0 si la conversion est impossible
+	 * @param aString chaine � convertir
+	 * @return Float correspondant � la chaine pass�e en param�tre
+	 */
+	public static Float formatNumber(String aString) {
+		Float lResult = new Float(VAL_DEFAUT_NUMERIQUE);
+		try {
+			java.text.DecimalFormatSymbols lDFS = new java.text.DecimalFormatSymbols();
+			lDFS.setDecimalSeparator(',');
+			lDFS.setGroupingSeparator('�');
+			java.text.DecimalFormat lDF = new java.text.DecimalFormat("###,####.00",lDFS);
+			lResult = new Float(lDF.parse(aString).toString());
+		} catch (Exception ex) {
+			lResult = new Float(VAL_DEFAUT_NUMERIQUE);
+		}
+		//System.out.println("Conversion de "+aString+" = "+lResult.toString());
+		return lResult;
+	}
+	
+	/**
+	 * Suppression des caract�res #N/A, N/A, " et , d'une chaine pass�e en param�tre
+	 * @param aSource Chaine source
+	 * @return chaine sans les caract�res #N/A, N/A, " et ,
+	 */
+	public static String nettoyerChaine4BigDecimal(String aSource) {
+		if (aSource==null)
+			return null;
+		
+		String lChaineNettoyee = aSource;
+
+		lChaineNettoyee = lChaineNettoyee.replaceAll("\"", "");
+		lChaineNettoyee = lChaineNettoyee.replaceAll(",", "");
+		lChaineNettoyee = lChaineNettoyee.replaceAll("#N/A", "");
+		lChaineNettoyee = lChaineNettoyee.replaceAll("N/A", "");
+		
+		return lChaineNettoyee.trim();
+	}
+	
+	/**
+	 * Convertit si possible une chaine pass�e en param�tre en un long. Si cela n'est pas possible renvoi null
+	 * @param aSource Chaine � convertir
+	 * @return Long correspondant au param�tre
+	 */
+	public static Long toLongOrNull(String aSource) {
+		Long lNombre = null;
+		try {
+			lNombre = Long.valueOf(aSource);
+		} catch (NumberFormatException ex) {
+			lNombre = null;
+		}
+		return lNombre;
+	}
+	
+
+	/**
+	 * Fonction utilisant la m�thode before de java.util.Calendar mais qui teste
+	 * au pr�alable les valeurs nulles
+	 * @param aDateToCompare Date � comparer
+	 * @param aDateReference Date de r�f�rence
+	 * @return true si la date � comparer est ant�rieure � la date de r�f�rence
+	 */
+	public static boolean isBefore(java.util.Date aDateToCompare, java.util.Date aDateReference) {
+		
+		if (aDateToCompare==null && aDateReference==null)
+			return true;
+
+		if (aDateToCompare==null || aDateReference==null)
+			return false;
+
+		java.util.GregorianCalendar lDateToCompare = new java.util.GregorianCalendar();
+		lDateToCompare.setTime(aDateToCompare);
+
+		java.util.GregorianCalendar lDateReference = new java.util.GregorianCalendar();
+		// On va prendre la date pass�e en param�tre avec l'heure 23:59:59
+		// pour que le test isSameMonth soit compatible avec ce test
+		lDateReference.setTime(aDateReference);
+		lDateReference.add(Calendar.DATE, 1);
+		lDateReference.set(Calendar.HOUR, 0);
+		lDateReference.set(Calendar.MINUTE, 0);
+		lDateReference.set(Calendar.SECOND, 0);
+		lDateReference.add(Calendar.SECOND, -1);
+		
+		
+		return lDateToCompare.before(lDateReference);			
+		
+	}
+	
+
+	
+	/**
+	 * Fonction utilisant la m�thode after de java.util.Calendar mais qui teste
+	 * au pr�alable les valeurs nulles
+	 * @param aDateToCompare Date � comparer
+	 * @param aDateReference Date de r�f�rence
+	 * @return true si la date � comparer est post�rieure � la date de r�f�rence
+	 */
+	public static boolean isAfter(java.util.Date aDateToCompare, java.util.Date aDateReference) {
+		
+		if (aDateToCompare==null && aDateReference==null)
+			return true;
+
+		if (aDateToCompare==null || aDateReference==null)
+			return false;
+
+		java.util.GregorianCalendar lDateToCompare = new java.util.GregorianCalendar();
+		lDateToCompare.setTime(aDateToCompare);
+
+		java.util.GregorianCalendar lDateReference = new java.util.GregorianCalendar();
+		// On va prendre la date pass�e en param�tre avec l'heure 23:59:59
+		// pour que le test isSameMonth soit compatible avec ce test
+		lDateReference.setTime(aDateReference);
+		lDateReference.add(Calendar.DATE, 1);
+		lDateReference.set(Calendar.HOUR, 0);
+		lDateReference.set(Calendar.MINUTE, 0);
+		lDateReference.set(Calendar.SECOND, 0);
+		lDateReference.add(Calendar.SECOND, -1);
+		
+		
+		return lDateToCompare.after(lDateReference);			
+		
+	}
+	
+
+	
+	/**
+	 * Fonction utilisant la m�thode after de java.util.Calendar sur 2 param�tres pour
+	 * lequel au premier est ajout� 1 an et qui teste au pr�alable les valeurs nulles
+	 * @param aDateToCompare Date � comparer
+	 * @param aDateReference Date de r�f�rence
+	 * @return true si la date � comparer est post�rieure � la date de r�f�rence
+	 */
+	public static boolean isAfterPlus1An(java.util.Date aDateToCompare, java.util.Date aDateReference) {
+		
+		if (aDateToCompare==null && aDateReference==null)
+			return true;
+
+		if (aDateToCompare==null || aDateReference==null)
+			return false;
+
+		java.util.GregorianCalendar lDateToCompare = new java.util.GregorianCalendar();
+		lDateToCompare.setTime(aDateToCompare);
+		lDateToCompare.add(Calendar.YEAR, 1);
+		lDateToCompare.add(Calendar.DATE, 1);
+		lDateToCompare.set(Calendar.HOUR, 0);
+		lDateToCompare.set(Calendar.MINUTE, 0);
+		lDateToCompare.set(Calendar.SECOND, 0);
+
+		java.util.GregorianCalendar lDateReference = new java.util.GregorianCalendar();
+		// On va prendre la date pass�e en param�tre avec l'heure 23:59:59
+		// pour que le test isSameMonth soit compatible avec ce test
+		lDateReference.setTime(aDateReference);
+		lDateReference.add(Calendar.DATE, 1);
+		lDateReference.set(Calendar.HOUR, 0);
+		lDateReference.set(Calendar.MINUTE, 0);
+		lDateReference.set(Calendar.SECOND, 0);
+		lDateReference.add(Calendar.SECOND, -1);
+		
+		return lDateToCompare.after(lDateReference);			
+		
+	}
+	
+	/**
+	 * M�thode renvoyant true si les deux dates pass�es en param�tres se situent dans le m�me mois
+	 * @param aDateToCompare Date � comparer
+	 * @param aDateReference Date de r�f�rence
+	 * @return bool�ant indiquant si les deux dates pass�es en param�tres se situent dans le m�me mois
+	 */
+	public static boolean isSameMonth(java.util.Date aDateToCompare, java.util.Date aDateReference) {
+		
+		if (aDateToCompare==null && aDateReference==null)
+			return true;
+
+		if (aDateToCompare==null || aDateReference==null)
+			return false;
+
+		java.util.GregorianCalendar lDateToCompare = new java.util.GregorianCalendar();
+		lDateToCompare.setTime(aDateToCompare);
+
+		java.util.GregorianCalendar lDateReference = new java.util.GregorianCalendar();
+		lDateReference.setTime(aDateReference);
+		
+		
+		return (lDateToCompare.get(java.util.Calendar.MONTH)==lDateReference.get(java.util.Calendar.MONTH)) 
+				&& 
+				(lDateToCompare.get(java.util.Calendar.YEAR)==lDateReference.get(java.util.Calendar.YEAR)) ;
+		
+	}
+
+
+	/**
+	 * Fonction renvoyant true si les deux dates pass�es en param�tres se situent dans la m�me ann�e
+	 * @param aDateToCompare Date � comparer
+	 * @param aDateReference Date de r�f�rence
+	 * @return bool�ant indiquant si les deux dates pass�es en param�tres se situent dans la m�me ann�e
+	 */
+	public static boolean isSameYear(java.util.Date aDateToCompare, java.util.Date aDateReference) {
+		
+		if (aDateToCompare==null && aDateReference==null)
+			return true;
+
+		if (aDateToCompare==null || aDateReference==null)
+			return false;
+
+		java.util.GregorianCalendar lDateToCompare = new java.util.GregorianCalendar();
+		lDateToCompare.setTime(aDateToCompare);
+
+		java.util.GregorianCalendar lDateReference = new java.util.GregorianCalendar();
+		lDateReference.setTime(aDateReference);
+		
+		
+		return (lDateToCompare.get(java.util.Calendar.YEAR)==lDateReference.get(java.util.Calendar.YEAR)) ;
+		
+	}
+
+	/**
+	 * Retourne la date correspondant au dernier jour du mois suivante de la 
+	 * date pass�e en param�tre
+	 * @param aDateReference 
+	 * @return date correspondant au dernier jour du mois suivante de la 
+	 * date pass�e en param�tre
+	 */
+	public static Date lastDayNextMonth(Date aDateReference) {
+		GregorianCalendar lGCResultat = new GregorianCalendar();
+		lGCResultat.setTime(aDateReference);
+		lGCResultat.set(Calendar.DATE, 1);
+		lGCResultat.add(Calendar.MONTH, 2);
+		lGCResultat.add(Calendar.DATE, -1);
+		
+		return lGCResultat.getTime();
+	}
+
+	/**
+	 * Fonction renvoyant true si la date pass�e en argument est une date au format pass� en param�tres
+	 * @param aSourceIsDate Chaine de caract�re � tester
+	 * @param aDateFormat Format de la date � v�rifier
+	 * @return true si la date pass�e en argument est une date au format pass� en param�tres
+	 */
+	public static boolean isDate(String aSourceIsDate, String aDateFormat) {
+		boolean isDate = false;
+		
+		if (aSourceIsDate==null)
+			return false;
+		
+		if (aDateFormat==null)
+			return false;
+	  	
+		SimpleDateFormat sdf = new SimpleDateFormat(aDateFormat);
+		sdf.setLenient(true);
+	  	Date d = new Date();
+		  	
+	  	try {
+		   d = sdf.parse(aSourceIsDate );
+		   String t = sdf.format(d);
+		   if(t.compareTo(aSourceIsDate) !=  0)
+			   isDate = false;
+		   isDate = true;
+	  	} catch (Exception e) {
+	  		isDate = false;
+	  	}
+	  	
+	  	
+	  	return isDate;
+	}
+
+	/**
+	 * Fonction renvoyant true si la date pass�e en argument est une date au format pass� en param�tres et est �gale � la date �galement pass�e en param�tre
+	 * @param aSourceIsDate Chaine de caract�re � tester
+	 * @param aDateFormat Format de la date � v�rfiier
+	 * @param aDateCompare Date pour la comparaison
+	 * @return true si la date pass�e en argument est une date au format pass� en param�tres
+	 */
+	public static boolean isDateEquals(String aSourceIsDate, String aDateFormat, Date aDateCompare) {
+		boolean isDate = false;
+
+		if (aSourceIsDate==null)
+			return false;
+		
+		if (aDateFormat==null)
+			return false;
+
+		SimpleDateFormat sdf = new SimpleDateFormat(aDateFormat);
+		sdf.setLenient(true);
+	  	Date d = new Date();
+		  	
+	  	try {
+		   d = sdf.parse(aSourceIsDate );
+		   String t = sdf.format(d);
+		   if(t.compareTo(aSourceIsDate) !=  0)
+			   isDate = false;
+		   isDate = true;
+	  	} catch (Exception e) {
+	  		isDate = false;
+	  	}
+
+	  	if (isDate)
+	  		return isDateEqualsSansHeure(d,aDateCompare);
+	  		else return false;
+	}
+	
+	/**
+	 * V�rifie l'�galit� entre deux dates sans prendre en compte l'heure
+	 * @param aDateSource Date source � tester
+	 * @param aDateCompare Date � comparer
+	 * @return true si les deux dates sont �gales sans prendre en compte l'heure
+	 */
+	public static boolean isDateEqualsSansHeure(Date aDateSource, Date aDateCompare) {
+		SimpleDateFormat sdfSansHeure = new SimpleDateFormat("dd/MM/yyyy");
+		
+		return sdfSansHeure.format(aDateSource).equals(sdfSansHeure.format(aDateCompare)) ;
+		
+	}
+
+	
+	/**
+	 * Fonction renvoyant true si la date pass�e en argument est une date au format pass� en param�tres et correspond � la date du jour
+	 * @param aSourceIsDate Chaine de caract�re � tester
+	 * @param aDateFormat Format de la date � v�rfiier
+	 * @return true si la date pass�e en argument est une date au format pass� en param�tres et correspond � la date du jour
+	 */
+	public static boolean isDateDuJour(String aSourceIsDate, String aDateFormat) {
+
+		if (aSourceIsDate==null)
+			return false;
+		
+		if (aDateFormat==null)
+			return false;
+		
+
+		SimpleDateFormat sdf = new SimpleDateFormat(aDateFormat);
+
+		return aSourceIsDate.equals(sdf.format(new Date()));
+	}
+
+	/**
+	 * Fonction qui retourne la date pass�e en param�tre au format pass� �galement en param�tre
+	 * @param aDate Date � convertir
+	 * @param aDateFormat Format � utiliser pour le formatage de la date
+	 * @return Chaine de caract�re correspondant au formatage de la date
+	 */
+	public static String formatDateToPattern(Date aDate, String aDateFormat) {
+
+		if (aDate==null)
+			return null;
+		
+		if (aDateFormat==null)
+			return null;
+	  	
+		SimpleDateFormat sdf = new SimpleDateFormat(aDateFormat);
+		sdf.setLenient(true);
+	  	  	
+		String lResult = null;
+		
+	  	try {
+		   lResult = sdf.format(aDate);
+	  	} catch (Exception e) {
+	  		lResult = null;
+	  	}		
+	  	
+	  	return lResult;
+	}
+
+
+	/**
+	 * Fonction qui retourne la date courante au format pass� �galement en param�tre
+	 * @param aDateFormat Format � utiliser pour le formatage de la date
+	 * @return Chaine de caract�re correspondant au formatage de la date
+	 */	public static String formatCurrentDateToPattern(String aDateFormat) {
+		return formatDateToPattern(new Date(), aDateFormat);
+	}
+
+	 
+	 /**
+	  * Fonction de conversion de String en Float - Retourne la valeur num�rique par d�faut s'il y a une exception
+	  * @param aSource String a convertir
+	  * @return Float Resultat. - Retourne la valeur num�rique par d�faut s'il y a une exception
+	  */
+	 public static float String2Float(String aSource) {
+		 if (aSource==null)
+			 return VAL_DEFAUT_NUMERIQUE;
+		 
+		 return formatNumber(aSource.replace(",", "."));
+		 
+	 }
+	 
+	 /**
+	  * Fonction de conversion de String en Double - Retourne la valeur num�rique par d�faut s'il y a une exception
+	  * @param aSource String � convertir
+	  * @return Double Resultat - Retourne la valeur num�rique par d�faut s'il y a une exception
+	  */
+	 public static double String2Double(String aSource) {
+		 if (aSource==null)
+			 return VAL_DEFAUT_NUMERIQUE;
+				 
+		 
+		 double lResult;
+	
+		 try {
+			
+			 lResult = Double.parseDouble(aSource.replace(",", "."));
+		 } catch (Exception ex) {
+			 lResult = VAL_DEFAUT_NUMERIQUE;
+		 }
+		 
+		 return lResult;
+	 }
+
+	 
+	 /**
+	  * Fonction de conversion de String en Long - Retourne la valeur num�rique par d�faut s'il y a une exception
+	  * @param aSource String a convertir
+	  * @return Double REsultat - Retourne la valeur num�rique par d�faut s'il y a une exception
+	  */
+	 public static long String2Long(String aSource) {
+		 if (aSource==null)
+			 return VAL_DEFAUT_NUMERIQUE;
+				 
+		 
+		 long lResult;
+		 
+		 try {
+			 lResult = Long.parseLong(aSource.replace(",", "."));
+		 } catch (Exception ex) {
+			 lResult = VAL_DEFAUT_NUMERIQUE;
+		 }
+		 
+		 return lResult;
+	 }
+	 
+	 /**
+	  * Fonction de conversion de String en Int - Retourne la valeur num�rique par d�faut s'il y a une exception
+	  * @param aSource String a convertir
+	  * @return Int resultat - Retourne la valeur num�rique par d�faut s'il y a une exception
+	  */
+	 public static int String2Int(String aSource) {
+		 if (aSource==null)
+			 return VAL_DEFAUT_NUMERIQUE;
+				 
+		 
+		 int lResult;
+		 
+		 try {
+			 lResult = Integer.parseInt(aSource);
+		 } catch (Exception ex) {
+			 lResult = VAL_DEFAUT_NUMERIQUE;
+		 }
+		 
+		 return lResult;
+	 }
+	 
+	 /**
+	  * Fonction de conversion de String en Date suivant un format pass� en parametre. Retourne null s'il y a une erreur
+	  * @param aDate String a convertir
+	  * @param aDateFormat Format de la date a utilis�
+	  * @return Date resultat
+	  */
+	 public static Date String2Date(String aDate, String aDateFormat) {
+			if (aDate==null)
+				return null;
+			
+			if (aDateFormat==null)
+				return null;
+		  	
+			SimpleDateFormat sdf = new SimpleDateFormat(aDateFormat);
+			sdf.setLenient(true);
+		  	  	
+			Date lResult = null;
+			
+		  	try {
+			   lResult = sdf.parse(aDate);
+		  	} catch (Exception e) {
+		  		lResult = null;
+		  	}		
+		  	
+		  	return lResult;
+	 }
+	 /**
+	  * Fonction qui permet de retourner la date d'hier
+	
+	  * @param aDateFormat Format de la date a utilis�
+	  * @return Date resultat
+	  */
+	 public static Date yesterdayDate() {
+		 //si c'est lundi on cherche les fichiers de samedi car il n'ya pas de données le dimanche
+		 if (TalendDate.getPartOfDate("DAY_OF_WEEK",TalendDate.getCurrentDate())==2) 
+	 return TalendDate.addDate(TalendDate.getCurrentDate(),-2,"dd");
+		 else
+			 return TalendDate.addDate(TalendDate.getCurrentDate(),-1,"dd"); 
+	 }
+
+	 /**
+	  * Fonction retournant le deuxi�me parametre si le premiere est null
+	  * @param <T> Classe quelconque
+	  * @param a Valeur � tester si elle vaut null
+	  * @param b Valeur a retourner si le premiere parametre est null
+	  * @return a si non null sinon b
+	  */
+	 public static <T> T nvl(T a, T b) {
+		 return (a == null)?b:a;
+	 }
+	 
+	 /**
+	  * 
+	  * @param maChaine chaine de caractere avec les separateurs
+	  * @param monSeparateur = type du separateur
+	  * @param maPosition = num de le chaine souhaitee
+	  * @return
+	  */
+	 public static String SplitOneThing(String maChaine,String monSeparateur,Integer maPosition){
+		 
+		 if (maChaine==null) return null;
+		 if (monSeparateur==null) return null;
+		 if (maPosition==null) return null;
+		 
+		 String[] monSplit;
+		 String lResult = null;
+		 
+		 monSplit = maChaine.split(monSeparateur);
+		
+		 if (maPosition<monSplit.length)
+		 
+		 lResult = monSplit[maPosition];
+		 
+		 return lResult;
+	
+	 }
+
+
+		/**
+		 * A partir d'un long représentant un nombre de millisecondes, 
+		 * affichage de la durée sous la forme $X$H $Y$min $Z$s
+		 * @param aTime
+		 * @return
+		 */
+		public static String getDuration(long aTime) {		
+			int lHeure = (int)(aTime/1000/60/60);
+			
+			long lRestant = aTime - lHeure*1000*60*60;
+			
+			int lMinute = (int)(lRestant/1000/60);
+			
+			lRestant = lRestant - lMinute*1000*60;
+			
+			int lSeconde = (int)(lRestant/1000);
+			
+			
+			return lHeure + " H "+ lMinute + " min "+ lSeconde + " s";
+		}
+	 
+}
+

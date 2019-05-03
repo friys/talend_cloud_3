@@ -1,0 +1,185 @@
+package routines;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.zip.CRC32;
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+import java.util.Base64.Decoder;
+import java.util.Base64.Encoder;
+
+public class HashUtils {
+	
+	/**
+	 * Si la clé est suffixée par _ENCODE, application de la méthode unencode_password sur la valeur
+	 * sinon retour de la valeur telle quelle
+	 * @param aVariable
+	 * @param aVariable
+	 * @return Si le paramètre est suffixé par _ENCODE, application de la méthode unencode_password
+	 * sinon retour de la valeur telle quelle
+	 */
+	public static String loadVariableContextWithUnencode(String aKey, String aValue) {
+		if (aValue==null  || aKey==null)
+			return null;
+		
+		if (aKey.toUpperCase().endsWith("_ENCODE"))
+			return unencode_password(aValue);
+		
+		return aValue;
+	}
+	
+	
+	/**
+	 * Calcul du CRC d'un paramètre
+	 * @param message
+	 * @return CRC d'un paramètre
+	 */
+	public static Long getCRC(String message){
+		if (message==null) return null;
+		CRC32 crc = new CRC32();
+		crc.update(message.getBytes());
+		return crc.getValue();
+	}
+	
+	/**
+	 * MD5 d'un paramètre
+	 * @param message
+	 * @return MD5 d'un paramètre
+	 */
+    public static String md5Hashing(String message) {
+		if (message==null) return null;
+        String hashtext = null;
+        MessageDigest m;
+        try {
+        	m = MessageDigest.getInstance("MD5");
+        	m.reset();
+        	m.update(message.getBytes());
+        	byte[] digest = m.digest();
+        	BigInteger bigInt = new BigInteger(1,digest);
+        	hashtext = bigInt.toString(16);
+        	while(hashtext.length() < 32 ){
+        		hashtext = "0"+hashtext;
+        	}
+        	} catch (NoSuchAlgorithmException e) {
+        		// TODO Auto-generated catch block
+        		e.printStackTrace();
+        	}
+        return hashtext;
+    }
+    
+    /**
+     * SHA256 d'un paramètre
+     * @param message
+     * @return SHA256 d'un paramètre
+     */
+    public static String sha256Hashing(String message) {
+		if (message==null) return null;
+    	String hashtext = null;
+        MessageDigest m;
+        try {
+        	m = MessageDigest.getInstance("SHA-256");
+        	m.reset();
+        	m.update(message.getBytes());
+        	byte[] digest = m.digest();
+        	BigInteger bigInt = new BigInteger(1,digest);
+        	hashtext = bigInt.toString(16);
+        	while(hashtext.length() < 32 ){
+        		hashtext = "0"+hashtext;
+        	}
+        	} catch (NoSuchAlgorithmException e) {
+        		// TODO Auto-generated catch block
+        		e.printStackTrace();
+        	}
+        return hashtext;
+    }
+    
+    /**
+     * Encode en base64 une chaîne passée en paramètre
+     * @param aSource
+     * @return chaîne encodée
+     */
+    private static String encodeBase64_basic(String aSource) {
+        if (aSource==null)
+            return null;
+         Encoder enc = Base64.getEncoder();
+         return enc.encodeToString( aSource.getBytes());
+    }
+   
+    /**
+     * Décode en Base64 un texte passé en paramètre
+     * @param aValue
+     * @return paramètre décodé en base64
+     */
+    private static String unencodeBase64_basic(String aValue) {
+        if (aValue==null)
+            return null;
+        Decoder dec = Base64.getDecoder();
+        String lResult = new String( dec.decode( aValue ) );
+        return lResult;
+    }
+
+   
+
+    /**
+     * Encode en base64 un mot de passe passé en paramètre en appliquant l'algorithme suivant :
+     * 1. On encode en base64 le mot de passe reçu
+     * 2. On préfixe ce texte encodé avec 3 caractères aléatoires
+     * 3. On suffixe ce texte encodé avec 5 caractères aléatoires
+     * 4. On encode de nouveau en base64 la chaîne ainsi obtenue avec le préfixe et le suffixe
+     * @param aSource
+     * @return mot de passe encodé
+     */
+    public static String encode_password(String aSource) {
+        if (aSource==null)
+            return null;
+   
+        String lPwdencode = encodeBase64_basic(aSource);
+       
+        String lPwdCompleted = TalendString.getAsciiRandomString(3)
+                + lPwdencode
+                + TalendString.getAsciiRandomString(5);
+       
+        return encodeBase64_basic(lPwdCompleted);
+    }
+   
+
+
+    /**
+     * Décode en base64 un mot de passe passé en paramètre en appliquant l'algorithme suivant :
+     * 1. On Décode en base64 le mot de passe reçu
+     * 2. On supprime les 3 premiers caractères
+     * 3. On supprime les 5 derniers caractères
+     * 4. On Décode de nouveau en base64 la chaîne ainsi obtenue sans le préfixe et le suffixe
+     * @param aSource
+     * @return mot de passe décodé
+     */
+    public static String unencode_password(String aValue) {
+        if (aValue==null)
+            return null;
+       
+        String lunencodeLevel1 = unencodeBase64_basic(aValue);
+        if (lunencodeLevel1.length()<8)
+            return null;
+        String lunencodeLevel2 = lunencodeLevel1.substring(3);
+        String lunencodeLevel3 = lunencodeLevel2.substring(0, lunencodeLevel2.length()-5);
+
+        return unencodeBase64_basic(lunencodeLevel3);
+    }
+    /**
+     * 
+     * @param hash
+     * @return
+     */
+	public static String bytesToHex(byte[] hash) 
+	{
+	    StringBuffer hexString = new StringBuffer();
+	    for (int i = 0; i < hash.length; i++) 
+	    {
+	    String hex = Integer.toHexString(0xff & hash[i]);
+	    if(hex.length() == 1) hexString.append('0');
+	        hexString.append(hex);
+	    }
+	    return hexString.toString();
+	}
+    
+}

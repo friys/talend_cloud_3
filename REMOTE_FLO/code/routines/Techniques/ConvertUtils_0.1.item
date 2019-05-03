@@ -1,0 +1,209 @@
+package routines;
+
+import java.util.Date;
+
+
+public class ConvertUtils {
+
+
+
+	/**
+	 * Convertir une chaine de caractère en un Boolean
+	 * Retourne 0 si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @return : Valeur convertie. 0 si la conversion est impossible
+	 */
+	public static int String2BooleanInt(String aSrc) {
+        int lResult;
+        
+        if (aSrc == null || "".equals(aSrc)) {
+        	lResult = 0;
+        } else if ("true".equalsIgnoreCase(aSrc) || "1".equals(aSrc))
+        	lResult = 1;
+	        else if ("false".equalsIgnoreCase(aSrc) || "0".equals(aSrc))
+	        	lResult = 0;
+	        	else lResult = 0;        
+        
+        
+        return lResult;
+    }
+
+	/**
+	 * Convertir une chaine de caractère en un Boolean
+	 * Retourne null si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @return : Valeur convertie. null si la conversion est impossible
+	 */
+	public static Boolean String2Boolean(String aSrc) {
+        if (aSrc == null || "".equals(aSrc)) {
+            return null;
+        }
+        Boolean lResult;
+        
+        if ("true".equalsIgnoreCase(aSrc) || "1".equals(aSrc))
+        	lResult = true;
+	        else if ("false".equalsIgnoreCase(aSrc) || "0".equals(aSrc))
+	        	lResult = false;
+	        	else lResult = null;        
+        
+        return lResult;
+    }
+
+	/**
+	 * Convertir une chaine de caractère en un timestamp en utilisant un pattern précis
+	 * Retourne null si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @param aPattern : Pattern de conversion
+	 * @return : Valeur convertie. null si la conversion est impossible
+	 */
+	public static Date String2Timestamp(String aSrc, String aPattern) {
+        if (aSrc == null || "".equals(aSrc) || aPattern == null || "".equals(aPattern)) {
+            return null;
+        }
+        Date lResult;
+        
+        try {
+        	lResult = TalendDate.parseDate(aPattern, aSrc);
+        } catch (Exception ex) {
+        	return null;
+        }
+        
+        return lResult;
+    }
+
+
+	/**
+	 * Convertir une chaine de caractère en un timestamp en utilisant le pattern yyyy-MM-dd HH:mm:ss
+	 * Retourne null si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @return : Valeur convertie. null si la conversion est impossible
+	 */
+	public static Date String2Timestamp_DS(String aSrc) {
+        if (aSrc == null || "".equals(aSrc)) {
+            return null;
+        }
+        Date lResult;
+        
+        try {
+        	lResult = TalendDate.parseDate("yyyy-MM-dd HH:mm:ss", aSrc);
+        } catch (Exception ex) {
+        	return null;
+        }
+        
+        return lResult;
+    }
+	
+
+	/**
+	 * Convertir une chaine de caractère en un timestamp en utilisant un pattern précis
+	 * Retourne null si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @param aPattern : Pattern de conversion
+	 * @return : Valeur convertie. null si la conversion est impossible
+	 */
+	public static Date String2Date(String aSrc, String aPattern) {
+        if (aSrc == null || "".equals(aSrc) || aPattern == null || "".equals(aPattern)) {
+            return null;
+        }
+        Date lResult;
+        
+        try {
+        	lResult = TalendDate.parseDate(aPattern, aSrc);
+        } catch (Exception ex) {
+        	return null;
+        }
+        
+        return lResult;
+    }
+
+
+	/**
+	 * Convertir une chaine de caractère en un timestamp en utilisant le pattern yyyy-MM-dd
+	 * Retourne null si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @return : Valeur convertie. null si la conversion est impossible
+	 */
+	public static Date String2Date_DS(String aSrc) {
+        if (aSrc == null || "".equals(aSrc)) {
+            return null;
+        }
+        Date lResult;
+        
+        try {
+        	lResult = TalendDate.parseDate("yyyy-MM-dd", aSrc);
+        } catch (Exception ex) {
+        	return null;
+        }
+        
+        return lResult;
+    }
+	
+
+	/**
+	 * Convertir une chaine de caractère en un Long
+	 * Retourne null si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @return : Valeur convertie. null si la conversion est impossible
+	 */
+	public static Long String2Long(String aSrc) {
+        if (aSrc == null || "".equals(aSrc)) {
+            return null;
+        }
+        Long lResult;
+        
+        try {
+        	lResult = Long.parseLong(aSrc);
+        } catch (Exception ex) {
+        	return null;
+        }
+        
+        return lResult;
+    }
+	
+
+	/**
+	 * Convertir une chaine de caractère en un Integer
+	 * Retourne null si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @return : Valeur convertie. null si la conversion est impossible
+	 */
+    public static Integer String2Integer(String aSrc) {
+        if (aSrc == null || "".equals(aSrc)) {
+            return null;
+        }
+        Integer lResult;
+        
+        try {
+        	lResult = Integer.parseInt(aSrc);
+        } catch (Exception ex) {
+        	return null;
+        }
+        
+        return lResult;
+    }
+    
+
+	/**
+	 * Convertir une chaine de caractère en un int
+	 * Retourne 0 si la conversion est impossible
+	 * @param aSrc : Chaine à convertir
+	 * @return : Valeur convertie. 0 si la conversion est impossible
+	 */
+    public static Integer String2Int(String aSrc) {
+        if (aSrc == null || "".equals(aSrc)) {
+            return 0;
+        }
+
+        Integer lResult;
+        
+        try {
+        	lResult = Integer.parseInt(aSrc);
+        } catch (Exception ex) {
+        	return 0;
+        }
+        
+        return lResult.intValue();
+    }
+    
+    
+}
